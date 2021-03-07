@@ -1,0 +1,82 @@
+@import "./colors.less";
+
+.welcome-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.welcome-container {
+  margin-top: 20vh;
+  
+  & > span:first-child {
+    font-size: 22px;
+    color: @yellow;
+  }
+}
+
+.title {
+  font-size: clamp(40px, 8vw, 80px);
+  letter-spacing: 1.42px;
+  margin-bottom: 0;
+  color: @frost-white;
+}
+
+.subtitle {
+  font-size: clamp(26px, 6vw, 52px);
+  letter-spacing: 1.42px;
+  color: @frost-white;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+.bio {
+  max-width: 600px;
+  font-size: 22px;
+  line-height: 1.24;
+  color: @bright-purple;
+}
+
+.welcome-actions {
+  display: flex;
+  padding-top: 25px;
+  gap: 16px;
+
+  & > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 148px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: @yellow;
+
+    border: 2px solid @yellow;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+  }
+
+  & > a:hover {
+    background-color: rgba(249, 220, 120, 0.2);
+    color: @yellow-golden;
+    border-color: @yellow-golden;
+  }
+
+  & > a:focus {
+    outline-width: 1px;
+    outline-color: @bright-purple;
+    outline-style: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .welcome-container > span:first-child,
+  .bio {
+    font-size: 18px;
+  }
+}

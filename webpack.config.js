@@ -32,7 +32,7 @@ module.exports = {
     alias: {
       'react-dom': '@hot-loader/react-dom',
     },
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.jsx', '.less'],
   },
   devServer: {
     open: 'Google Chrome',

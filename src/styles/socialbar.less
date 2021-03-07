@@ -1,0 +1,42 @@
+@import './colors.less';
+
+.social-bar {
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+
+  letter-spacing: 1.42px;
+  writing-mode: vertical-lr;
+
+  &::after {
+    content: '';
+    height: 60px;
+    width: 1px;
+    background-color: @white;
+    margin-top: 25px;
+
+    transition: background-color 0.2s ease;
+  }
+
+  &:hover::after {
+    background-color: @yellow;
+  }
+}
+
+.social-link {
+  & ~ & {
+    margin-top: 8px;
+  }
+
+  & > .mi {
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: @yellow;
+    }
+  }
+}
