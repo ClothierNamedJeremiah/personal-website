@@ -1,17 +1,10 @@
 @import './colors.less';
+@import './mixins.less';
 
 .contact-bar {
   display: flex;
   align-items: center;
-  opacity: 0.8;
-
-  position: sticky;
-  float: right;
-  bottom: 0;
-  margin-right: 25px;
-
-  font-size: 12px;
-  letter-spacing: 1.42px;
+  
   writing-mode: vertical-lr;
   transition: color 0.2s ease;
 
@@ -19,16 +12,5 @@
     color: @yellow;
   }
 
-  &:hover::after {
-    background-color: @yellow;
-  }
-  
-  &::after {
-    content: '';
-    height: 60px;
-    width: 1px;
-    background-color: @white;
-    margin-top: 25px;
-    transition: background-color 0.2s ease;
-  }
+  .vertical-line();
 }

@@ -1,0 +1,15 @@
+.vertical-line {
+  &::after {
+    content: '';
+    height: 60px;
+    width: 1px;
+    background-color: @white;
+    margin-top: 25px;
+
+    transition: background-color 0.2s ease;
+  }
+
+  &:hover::after {
+    background-color: @yellow;
+  }
+}
