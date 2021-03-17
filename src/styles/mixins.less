@@ -1,4 +1,5 @@
-.vertical-line {
+/* Use parentheses to prevent actual classes from being created */
+.vertical-line() {
   &::after {
     content: '';
     height: 60px;
@@ -7,9 +8,5 @@
     margin-top: 25px;
 
     transition: background-color 0.2s ease;
-  }
-
-  &:hover::after {
-    background-color: @yellow;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/contactbar.less';
+import '../../styles/contactbar.less';
 
 const Contactbar = () => (
   <div className="contact-bar">

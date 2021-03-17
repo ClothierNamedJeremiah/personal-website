@@ -1,10 +1,12 @@
 import React from 'react';
 
-import '../styles/about.less';
+import WorkHistoryList from './WorkHistoryList';
+
+import '../../styles/about.less';
 
 const About = () => (
   <main className="about">
-    <div className="welcome-wrapper">
+    {/* <div className="welcome-wrapper">
       <div className="welcome-container">
         <span>Hi, my name is</span>
         <h1 className="title">Jeremiah Clothier</h1>
@@ -27,7 +29,8 @@ const About = () => (
           </a>
         </div>
       </div>
-    </div>
+    </div> */}
+    <WorkHistoryList />
   </main>
 );
 

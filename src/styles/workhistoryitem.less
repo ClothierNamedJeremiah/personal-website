@@ -1,0 +1,82 @@
+@import "./colors.less";
+
+/*
+  Using visibility to keep the height of the container the same regardless of
+  which element is active. If we used display: none -> display: block then
+  the cumulative layout shift (CLS) would increase.
+*/
+.job-container {
+  grid-area: main;
+  max-width: 600px;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 1, 1);
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.job-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.job-company {
+  margin-left: 1em;
+  font-size: 14px;
+  font-weight: 700;
+  color: @yellow;
+
+  & > a {
+    display: inline-block;
+    position: relative;
+    
+    &::before,
+    &::after {
+      // display: none;
+      content: "";
+
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      bottom: -5px;
+      
+      background-color: @yellow;
+      opacity: 1;
+      transition:
+        width 0.5s ease-in-out,
+        opacity 0.5s ease-in-out;
+    }
+
+    &::before {
+      right: 50%;
+    }
+  
+    &::after {
+      left: 50%;
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        width: 50%;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.job-duration {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.job-accomplishments {
+  list-style-type: none;
+  color: @bright-purple;
+  padding-inline-start: 0;
+}

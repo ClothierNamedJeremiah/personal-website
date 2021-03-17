@@ -1,0 +1,37 @@
+{
+  "positions": [
+    {
+      "title": "Junior Development Engineer",
+      "company": "iGrafx",
+      "dateStr": "Nov. 2020 - Present",
+      "accomplishments": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc at tellus accumsan posuere. Etiam elementum pharetra placerat. Morbi nec nisi id nisi tincidunt mollis.",
+        "Morbi nec nisi id nisi tincidunt mollis. Aliquam auctor ac mauris mollis imperdiet. Integer suscipit luctus felis at vestibulum. In porta.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget nunc at tellus accumsan posuere. Etiam elementum pharetra",
+        "Aliquam auctor ac mauris mollis imperdiet. Integer suscipit luctus felis at vestibulum. In porta."
+      ],
+      "url": "https://www.igrafx.com/"
+    },
+    {
+      "title": "Cloud Infrastructure Engineer",
+      "company": "DTNA",
+      "dateStr": "July 2019 - Nov. 2020",
+      "accomplishments": [
+        "Developed and maintained over 50 Jenkins deployment pipelines consumed by Application Engineers, which enabled stable infrastructure and application deployment into DTNA’s Azure environments.",
+        "Developed a library of Terraform modules to deploy and maintain core infrastructure in Azure, which increased deployment times by 15%.",
+        "Lead the initiative to standardize my team’s code base by inventing a programming style guide, which aligned over 50 repositories."
+      ],
+      "url": "https://daimler-trucksnorthamerica.com/"
+    },
+    {
+      "title": "Technology Analyst",
+      "company": "University of Oregon",
+      "dateStr": "March 2017 - June 2019",
+      "accomplishments": [
+        "Resolved over 600 customer help tickets routed to the University Help Desk, for technical issues including virus removal and data transfers.",
+        "Performed diagnostics and troubleshooting of system issues, documented help desk tickets, and maintained customer service levels."
+      ],
+      "url": "https://www.uoregon.edu/"
+    }
+  ]
+}

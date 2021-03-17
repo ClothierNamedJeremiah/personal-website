@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import '../styles/logo.less';
+import '../../styles/logo.less';
 
 const Logo = () => {
   return (

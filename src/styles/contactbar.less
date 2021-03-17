@@ -8,9 +8,15 @@
   writing-mode: vertical-lr;
   transition: color 0.2s ease;
 
-  &:hover {
-    color: @yellow;
+  .vertical-line();
+
+  & > a {
+    transition: all 0.4s ease;
   }
 
-  .vertical-line();
+  & > a:hover {
+    color: @yellow;
+    padding-bottom: 5px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
 }
