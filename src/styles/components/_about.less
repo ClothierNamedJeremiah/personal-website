@@ -1,21 +1,16 @@
-@import "./colors.less";
-
 .about {
   display: grid;
-  grid-template-columns: 1fr;
-  // grid-template-rows: 100vh repeat(3, 1fr);
-  margin: 0 50px;
-  margin-top: 15vh;
+  grid-template-rows: 100vh repeat(3, auto);
+  margin: 100px 50px 0 50px;
 }
 
 .welcome-wrapper {
   display: flex;
+  margin-top: 10%;
   justify-content: center;
 }
 
 .welcome-container {
-  margin-top: 15vh;
-  
   & > span:first-child {
     font-size: 22px;
     color: @yellow;

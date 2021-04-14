@@ -1,5 +1,5 @@
 .DS_Store
 
+.next/
 node_modules/
-dist/
 TODO.md
