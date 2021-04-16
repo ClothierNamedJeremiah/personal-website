@@ -21,7 +21,7 @@
   & > .line {
     height: 8px;
     width: 100%;
-    background-color: @dark-purple;
+    background-color: $dark-purple;
     border-radius: 3px;
     box-shadow: 0 2px 8px 0 rgb(0, 0, 0, 0.25);
     transition: background-color 0.2s ease-in-out;

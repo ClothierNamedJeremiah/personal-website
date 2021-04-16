@@ -1,10 +1,10 @@
 /* Use parentheses to prevent actual classes from being created */
-.vertical-line() {
+@mixin vertical-line {
   &::after {
     content: '';
     height: 60px;
     width: 1px;
-    background-color: @white;
+    background-color: $white;
     margin-top: 25px;
 
     transition: background-color 0.2s ease;

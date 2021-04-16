@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-// import '../index.less';
-import '../test.scss';
+import '../scss/styles.scss';
 
 /**
  * The 'App' component is the top-level component which will be common across all the different
