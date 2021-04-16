@@ -1,5 +1,7 @@
 .DS_Store
-
-.next/
 node_modules/
 TODO.md
+
+# Next.js
+out/
+.next/
