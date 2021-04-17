@@ -1,40 +1,47 @@
-/* eslint-disable */
-import React, { useEffect } from 'react';
+import React from 'react';
+import Link from 'next/link';
 
-import Logo from './Logo';
 import MenuIcon from './MenuIcon';
 
-import '../../styles/navbar.less';
-
-const Navbar = () => {
-  return (
-    <nav className="nav">
-      <Logo />
-      <ul className="nav-items">
-        <li className="nav-item">
-          <a href="/" className="nav-link active">
-            About
+const Navbar = () => (
+  <nav className="nav">
+    <span className="mi-logo mi-logo-light" />
+    <ul className="nav-items">
+      <li className="nav-item">
+        <Link href="/">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a className="nav-link">
+            Home
           </a>
-        </li>
-        <li className="nav-item">
-          <a href="/blog" className="nav-link">
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link href="/blog">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a className="nav-link">
             Blog
           </a>
-        </li>
-        <li className="nav-item">
-          <a href="/bookshelf" className="nav-link">
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link href="/bookshelf">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a className="nav-link">
             Bookshelf
           </a>
-        </li>
-        <li className="nav-item">
-          <a href="/projects" className="nav-link">
-            Projects
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link href="/portfolio">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a className="nav-link">
+            Portfolio
           </a>
-        </li>
-      </ul>
-      <MenuIcon />
-    </nav>
-  );
-}
+        </Link>
+      </li>
+    </ul>
+    <MenuIcon />
+  </nav>
+);
 
 export default Navbar;

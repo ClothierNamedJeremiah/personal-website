@@ -5,8 +5,6 @@ import githubAlt from '@iconify/icons-codicon/github-alt';
 import linkedinIcon from '@iconify/icons-feather/linkedin';
 import mediumCircleFilled from '@iconify/icons-ant-design/medium-circle-filled';
 
-import '../../styles/socialbar.less';
-
 const Socialbar = () => (
   <div className="social-bar">
     <a

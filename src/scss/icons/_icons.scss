@@ -1,4 +1,32 @@
+$url-logo-light: url('../../../public/images/logo-light.svg');
+$url-logo-dark: url('../../../public/images/logo-dark.svg');
+
 .mi {
   color: $white;
   font-size: 24px;
+}
+
+.mi-logo {
+  height: 65px;
+  width: 65px;
+  cursor: pointer;
+  background-size: contain;
+
+  transition: background-image 0.2s ease;
+}
+
+.mi-logo-light {
+  background-image: $url-logo-light;
+  
+  &:hover {
+    background-image: $url-logo-dark;
+  }
+}
+
+.mi-logo-dark {
+  background-image: $url-logo-dark;
+  
+  &:hover {
+    background-image: $url-logo-light;
+  }
 }

@@ -1,10 +1,8 @@
 import React from 'react';
 
-import '../../styles/menuicon.less';
-
 const MenuIcon = () => {
   const onClick = (e) => {
-    const { currentTarget } = e;
+    const { currentTarget } = e
     if (currentTarget.classList.contains('active')) {
       currentTarget.classList.remove('active');
     } else {
