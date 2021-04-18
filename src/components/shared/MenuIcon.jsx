@@ -1,20 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const MenuIcon = () => {
-  const onClick = (e) => {
-    const { currentTarget } = e;
-    if (currentTarget.classList.contains('active')) {
-      currentTarget.classList.remove('active');
-    } else {
-      currentTarget.classList.add('active');
-    }
-  };
+const MenuIcon = (props) => {
+  const { isMenuOpen, setMenuOpen } = props;
 
   return (
     <div className="menu-wrapper">
       <div
-        className="menu-icon"
-        onClick={onClick}
+        className={isMenuOpen ? "menu-icon active" : "menu-icon"}
+        onClick={() => setMenuOpen(!isMenuOpen)}
         role="menuitem"
         tabIndex={-1}
       >
@@ -23,7 +17,12 @@ const MenuIcon = () => {
         <div className="line" />
       </div>
     </div>
-  )
+  );
+};
+
+MenuIcon.propTypes = {
+  isMenuOpen: PropTypes.bool.isRequired,
+  setMenuOpen: PropTypes.func.isRequired,
 };
 
 export default MenuIcon;

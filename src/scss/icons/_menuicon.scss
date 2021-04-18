@@ -1,17 +1,21 @@
+$translate3d-y-line: 14px;
+
 .menu-wrapper {
   display: grid;
   place-content: center;
-  height: 52px;
-  width: 80px;
   cursor: pointer;
+  
+  @media all and (min-width: 750px) {
+    display: none;
+  }
 }
 
 .menu-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60px;
-  width: 88px;
+  height: 40.909090909px;
+  width: 60px; 
   padding: 4px;
 
   &:focus {
@@ -19,36 +23,22 @@
   }
 
   & > .line {
-    height: 8px;
+    height: 5px;
     width: 100%;
     background-color: $dark-purple;
-    border-radius: 3px;
+    border-radius: 2px;
     box-shadow: 0 2px 8px 0 rgb(0, 0, 0, 0.25);
     transition: background-color 0.2s ease-in-out;
   }
 
-  & > *:nth-child(1) {
-    animation: animate-line-1-rev 0.7s ease-in-out;
-  }
+  @for $i from 1 through 3 {
+    & > *:nth-child(#{$i}) {
+      animation: animate-line-#{$i}-rev 0.7s ease-in-out;
+    }
 
-  & > *:nth-child(2) {
-    animation: animate-line-2-rev 0.7s ease-in-out;
-  }
-
-  & > *:nth-child(3) {
-    animation: animate-line-3-rev 0.7s ease-in-out;
-  }
-
-  &.active > *:nth-child(1) {
-    animation: animate-line-1 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
-  }
-
-  &.active > *:nth-child(2) {
-    animation: animate-line-2 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
-  }
-
-  &.active > *:nth-child(3) {
-    animation: animate-line-3 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+    &.active > *:nth-child(#{$i}) {
+      animation: animate-line-#{$i} 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+    }
   }
 }
 
@@ -57,10 +47,10 @@
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
   50% {
-    transform: translate3d(0, 22px, 0) rotate(0);
+    transform: translate3d(0, #{$translate3d-y-line}, 0) rotate(0);
   }
   100% {
-    transform: translate3d(0, 22px, 0) rotate(45deg);
+    transform: translate3d(0, #{$translate3d-y-line}, 0) rotate(45deg);
   }
 }
 
@@ -80,19 +70,19 @@
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
   50% {
-    transform: translate3d(0, -22px, 0) rotate(0);
+    transform: translate3d(0, -#{$translate3d-y-line}, 0) rotate(0);
   }
   100% {
-    transform: translate3d(0, -22px, 0) rotate(135deg);
+    transform: translate3d(0, -#{$translate3d-y-line}, 0) rotate(135deg);
   }
 }
 
 @keyframes animate-line-1-rev {
   0% {
-    transform: translate3d(0, 22px, 0) rotate(45deg);
+    transform: translate3d(0, #{$translate3d-y-line}, 0) rotate(45deg);
   }
   50% {
-    transform: translate3d(0, 22px, 0) rotate(0);
+    transform: translate3d(0, #{$translate3d-y-line}, 0) rotate(0);
   }
   100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
@@ -112,18 +102,12 @@
 
 @keyframes animate-line-3-rev {
   0% {
-    transform: translate3d(0, -22px, 0) rotate(135deg);
+    transform: translate3d(0, -#{$translate3d-y-line}, 0) rotate(135deg);
   }
   50% {
-    transform: translate3d(0, -22px, 0) rotate(0);
+    transform: translate3d(0, -#{$translate3d-y-line}, 0) rotate(0);
   }
   100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-}
-
-@media all and (min-width: 750px) {
-  .menu-wrapper {
-    display: none;
   }
 }

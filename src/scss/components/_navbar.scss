@@ -7,14 +7,22 @@
   left: 0;
   top: 0;
   right: 0;
-  height: $height-nav;
+  height: $height-nav-small;
   padding: 0 16px;
   background-color: $frost-white;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
-  transition: height 0.2s ease;
+  // transition: height 0.2s ease;
 
   & + * {
-    margin-top: $height-nav;
+    margin-top: $height-nav-small;
+
+    @media screen and (min-width: 750px) {
+      margin-top: $height-nav;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    height: $height-nav;
   }
 }
 

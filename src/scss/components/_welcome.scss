@@ -1,7 +1,11 @@
 .welcome-wrapper {
   display: flex;
-  margin-top: 15vh;
+  margin-top: 5vh;
   justify-content: center;
+  
+  @media screen and (min-width: 750px) {
+    margin-top: 15vh;
+  }
 }
 
 .title {
