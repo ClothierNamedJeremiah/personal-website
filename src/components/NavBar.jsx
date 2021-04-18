@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import MenuIcon from './MenuIcon';
+import MenuIcon from './shared/MenuIcon';
 
 const NavBar = () => (
   <nav className="nav">

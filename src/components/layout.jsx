@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import ContactBar from './ContactBar';
 import SocialBar from './SocialBar';
-import NavBar from './navbar/NavBar';
+import NavBar from './NavBar';
 
 const Layout = ({ children }) => (
   <>
