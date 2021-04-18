@@ -6,7 +6,7 @@ import MenuIcon from './shared/MenuIcon';
 const NavBar = () => (
   <nav className="nav">
     <span className="mi-logo mi-logo-light" />
-    <ul className="nav-items">
+    <ul className="nav-items fc-dark-purple">
       <li className="nav-item">
         <Link href="/">
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

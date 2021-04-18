@@ -7,7 +7,7 @@ const Welcome = () => {
         <span className="fs-normal fc-yellow">Hi, my name is</span>
         <h1 className="fs-x-large title">Jeremiah Clothier</h1>
         <h2 className="fs-large subtitle">I build things on the web for fun.</h2>
-        <p className="fs-normal fc-bright-purple bio">
+        <p className="fs-normal fc-light-purple bio">
           I am a software engineer with a constant desire to figure out why
           and how things work the way they do. I enjoy building websites and
           teaching others along the way.

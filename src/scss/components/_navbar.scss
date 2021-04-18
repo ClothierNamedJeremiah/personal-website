@@ -23,7 +23,6 @@
   list-style: none;
   
   font-size: 22px;
-  color: $bright-purple;
   letter-spacing: 1.25px;
 
   @media all and (min-width: 750px) {
@@ -33,7 +32,6 @@
 
 .nav-link {
   text-decoration: none;
-  color: $bright-purple;
   padding: 8px 16px;
   margin: 0 8px;
   border-radius: 4px;
@@ -42,7 +40,7 @@
 
   &:hover {
     color: #1c4fff;
-    background-color: $bright-purple;
+    background-color: $light-purple;
   }
 
   // &:visited {
