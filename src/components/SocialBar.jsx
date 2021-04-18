@@ -5,10 +5,12 @@ import githubAlt from '@iconify/icons-codicon/github-alt';
 import linkedinIcon from '@iconify/icons-feather/linkedin';
 import mediumCircleFilled from '@iconify/icons-ant-design/medium-circle-filled';
 
+import SideElement from './shared/SideElement';
+
 const Socialbar = () => (
-  <div className="social-bar">
+  <SideElement side="left">
     <a
-      className="social-link"
+      className="socialbar-link"
       href="https://github.com/ClothierNamedJeremiah"
       target="_blank"
       rel="noreferrer"
@@ -19,7 +21,7 @@ const Socialbar = () => (
       />
     </a>
     <a
-      className="social-link"
+      className="socialbar-link"
       href="https://www.linkedin.com/in/jeremiah-clothier/"
       target="_blank"
       rel="noreferrer"
@@ -30,7 +32,7 @@ const Socialbar = () => (
       />
     </a>
     <a
-      className="social-link"
+      className="socialbar-link"
       href="https://clothiernamedjeremiah.medium.com/"
       target="_blank"
       rel="noreferrer"
@@ -40,7 +42,7 @@ const Socialbar = () => (
         icon={mediumCircleFilled}
       />
     </a>
-  </div>
+  </SideElement>
 );
 
 export default Socialbar;

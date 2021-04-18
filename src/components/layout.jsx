@@ -1,7 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 
-import Navbar from './navbar/Navbar';
+import ContactBar from './ContactBar';
+import SocialBar from './SocialBar';
+import NavBar from './navbar/NavBar';
 
 const Layout = ({ children }) => (
   <>
@@ -13,8 +15,10 @@ const Layout = ({ children }) => (
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
     </Head>
-    <Navbar />
+    <NavBar />
     {children}
+    <SocialBar />
+    <ContactBar />
   </>
 );
 

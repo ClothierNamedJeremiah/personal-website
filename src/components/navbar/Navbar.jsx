@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import MenuIcon from './MenuIcon';
 
-const Navbar = () => (
+const NavBar = () => (
   <nav className="nav">
     <span className="mi-logo mi-logo-light" />
     <ul className="nav-items">
@@ -44,4 +44,4 @@ const Navbar = () => (
   </nav>
 );
 
-export default Navbar;
+export default NavBar;

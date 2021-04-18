@@ -1,5 +1,5 @@
 .home-wrapper {
   display: grid;
-  grid-auto-rows: 100vh;
+  grid-auto-rows: calc(100vh - #{$height-nav});
   margin: 0 5%
 }
