@@ -2,7 +2,7 @@ import React from 'react';
 
 const MenuIcon = () => {
   const onClick = (e) => {
-    const { currentTarget } = e
+    const { currentTarget } = e;
     if (currentTarget.classList.contains('active')) {
       currentTarget.classList.remove('active');
     } else {
