@@ -1,0 +1,38 @@
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0.5em 0;
+
+  @media screen and (min-width: 750px) {
+    display: none;
+  }
+}
+
+.nav-menu-line {
+  height: 2px;
+  width: 90%;
+
+  background-color: $dark-purple;
+}
+
+.nav-menu-items {
+  margin: 0.5em 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22px;
+}
+
+.nav-menu-item {
+  padding: 8px 16px;
+}
+
+.nav-menu-link {
+  text-transform: capitalize;
+}
