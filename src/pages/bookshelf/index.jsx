@@ -2,7 +2,7 @@ import React from 'react';
 
 const Bookshelf = () => (
   <h1>
-    Bookshelf
+    Bookshelf coming soon...
   </h1>
 );
 

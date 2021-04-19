@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => (
   <h1>
-    Blog
+    Blogs coming soon...
   </h1>
 );
 

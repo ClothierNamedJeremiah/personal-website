@@ -2,7 +2,7 @@ import React from 'react';
 
 const Portfolio = () => (
   <h1>
-    Portfolio
+    Portfolio coming soon...
   </h1>
 );
 
