@@ -8,7 +8,7 @@ const MenuIcon = (props) => {
     <div className="menu-wrapper">
       <div
         className={isMenuOpen ? "menu-icon active" : "menu-icon"}
-        onClick={(prevState) => setMenuOpen(!prevState)}
+        onClick={() => setMenuOpen((prevState) => !prevState)}
         role="menuitem"
         tabIndex={-1}
       >
