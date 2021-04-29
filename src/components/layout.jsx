@@ -13,7 +13,7 @@ const Layout = ({ children }) => (
       {/* metadata */}
       <meta charSet="utf-8" />
       <meta name="description" content="Jeremiah Clothier's personal website and porfolio" />
-      <meta name="theme-color" content="#303c6c" />
+      <meta name="theme-color" content="#F6F9FC" />
       <meta name="keywords" content="Jeremiah Clothier, Software Engineer, Personal Website" />
       <meta name="author" content="Jeremiah Clothier" />
       <meta property="og:type" content="website" />
