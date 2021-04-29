@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import MenuIcon from './shared/MenuIcon';
 import NavMenu from './NavMenu';
 
+const NAV_LINKS = {
+  home: '/',
+  blog: '/blog',
+  bookshelf: '/bookshelf',
+  portfolio: '/portfolio',
+};
+
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const links = {
-    home: '/',
-    blog: '/blog',
-    bookshelf: '/bookshelf',
-    portfolio: '/portfolio',
-  };
+  const router = useRouter();
 
   useEffect(() => {
     const wasMenuOpened = isMenuOpen;
     const navContainer = document.querySelector('.nav-container');
-    const nav = navContainer.querySelector('nav.nav');
 
     const { scrollHeight, style } = navContainer;
 
@@ -58,11 +59,14 @@ const NavBar = () => {
         <nav className="nav">
           <span className="mi-logo mi-logo-light" />
           <ul className="nav-items fc-dark-purple">
-            {Object.keys(links).map((key) => (
+            {Object.keys(NAV_LINKS).map((key) => (
               <li key={key} className="nav-item">
-                <Link href={links[key]}>
-                  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                  <a className="nav-link">
+                <Link href={NAV_LINKS[key]}>
+                  <a
+                    className={router.pathname === NAV_LINKS[key] ? 'nav-link active' : 'nav-link'}
+                    role="navigation"
+                    href={NAV_LINKS[key]}
+                  >
                     {key}
                   </a>
                 </Link>

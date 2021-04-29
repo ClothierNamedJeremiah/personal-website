@@ -35,4 +35,9 @@
 
 .nav-menu-link {
   text-transform: capitalize;
+
+  &.active {
+    color: $dark-purple;
+    font-weight: 700;
+  }
 }

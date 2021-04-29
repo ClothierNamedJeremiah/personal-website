@@ -3,9 +3,9 @@ import React from 'react';
 import Welcome from '../components/Welcome';
 
 const Home = () => (
-  <div className="home-wrapper">
+  <main className="home-wrapper">
     <Welcome />
-  </div>
+  </main>
 );
 
 export default Home;
