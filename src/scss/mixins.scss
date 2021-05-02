@@ -1,0 +1,29 @@
+@mixin gap($size) {
+  & {
+    margin: calc(#{$size} / -2);
+  }
+
+  & > * {
+    margin: calc(#{$size} / 2);
+  }
+}
+
+@mixin generate-stairs($n) {
+  @for $i from 1 through $n {
+    .stair-#{i} { 
+      width: (25px + ($i * 75px));
+    }
+  }
+}
+
+@mixin vertical-line {
+  &::after {
+    content: '';
+    height: 60px;
+    width: 1px;
+    background-color: $white;
+    margin-top: 25px;
+
+    transition: background-color 0.2s ease;
+  }
+}

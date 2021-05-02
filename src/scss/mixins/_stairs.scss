@@ -1,7 +1,0 @@
-@mixin generate-stairs($n) {
-  @for $i from 1 through $n {
-    .stair-#{i} { 
-      width: (25px + ($i * 75px));
-    }
-  }
-}

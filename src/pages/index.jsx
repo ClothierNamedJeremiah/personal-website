@@ -3,7 +3,7 @@ import React from 'react';
 import Welcome from '../components/Welcome';
 
 const Home = () => (
-  <main className="home-wrapper">
+  <main className="home-container">
     <Welcome />
   </main>
 );

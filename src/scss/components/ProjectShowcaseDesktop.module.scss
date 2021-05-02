@@ -1,0 +1,145 @@
+@import "../variables";
+
+@import "../icons/styles";
+@import "../mixins";
+
+$margin-project-showcase: 1em;
+
+.container {
+  display: flex;
+  align-items: center;
+  margin: 5em 0;
+
+  & > * {
+    flex-basis: 100%;
+  }
+
+  & + & {
+    margin-top: 15em;
+  }
+}
+
+.container:nth-of-type(odd) {
+  & > .project-preview-image {
+    margin-right: $margin-project-showcase;
+  }
+
+  & > .project-details {
+    align-items: flex-end;
+    margin-left: $margin-project-showcase;
+
+    & > .project-header,
+    & > .project-description {
+      text-align: right;
+    }
+  }
+}
+
+.container:nth-of-type(even) {
+  & > .project-preview-image {
+    margin-left: $margin-project-showcase;
+  }
+
+  & > .project-details {
+    align-items: flex-start;
+    order: -1;
+    margin-right: $margin-project-showcase;
+
+    & > .project-header,
+    & > .project-description {
+      text-align: left;
+    }
+  }
+}
+
+.project-preview-image {
+  position: relative;
+  width: 559px;
+  height: 345px;
+  border: solid 2px $light-purple;
+  border-radius: 4px;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  
+  & > .project-header { 
+    & > * {
+      margin-bottom: 0.25em;
+    }
+  }
+  
+  & > .project-description {
+    line-height: 1.42em;
+    background-color: $light-purple;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.project-preview-image {
+  position: relative;
+  cursor: pointer;
+  
+  height: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: $dark-purple;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.50);
+    transition: background-color 0.4s ease;
+  }
+
+  &:hover::after {
+    background-color: transparent;
+  }
+}
+
+.project-tags {
+  // Reset List Styles
+  list-style: none;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0.8;
+  margin-bottom: 1em;
+
+
+  & > * {
+    margin: 0.5em;
+  }
+  
+  & > *:not(:last-child) {
+    &::after {
+      margin-left: 1em;
+      content: '|';
+    }
+  }
+}
+
+.project-actions {
+  @include gap(1em);
+  padding: 1em;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

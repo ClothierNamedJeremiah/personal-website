@@ -3,6 +3,10 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -15,7 +19,7 @@ body {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color: $white; // TODO: white or frost-white
+  color: $frost-white;
   background-color: $dark-purple;
 }
 

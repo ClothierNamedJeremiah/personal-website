@@ -31,7 +31,9 @@ const Layout = ({ children }) => (
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
     </Head>
     <NavBar />
-    {children}
+    <main className="layout-wrapper">
+      {children}
+    </main>
     <SocialBar />
     <ContactBar />
   </>
