@@ -2,4 +2,4 @@
 
 Checkout my [my personal website](https://jeremiah-clothier.netlify.app/). My website has a portfolio, blogs, my work experience, and much more!
 
-Built with: React and Next.js
+Built with: SCSS, React and Next.js

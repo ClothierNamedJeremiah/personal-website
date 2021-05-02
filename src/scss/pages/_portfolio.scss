@@ -54,7 +54,7 @@
     position: absolute;
     content: '';
     height: 2px;
-    width: 100vw / math.cos(11deg);
+    width: 100vw / math.cos(11deg); // Need to calculate hypotenuse (math is cool)
 
     background-color: $yellow;
     transform: rotate(11deg);
@@ -124,13 +124,6 @@
   & > * {
     margin: 0.5em;
   }
-  
-  // & > *:not(:last-child) {
-  //   &::after {
-  //     margin-left: 1em;
-  //     content: '|';
-  //   }
-  // }
 }
 
 .project-showcase-actions {

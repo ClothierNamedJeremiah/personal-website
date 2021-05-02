@@ -16,7 +16,7 @@ const PROJECTS = [
   },
   {
     title: 'Personal Website',
-    description: 'I created a personal website to showcase some of my personal projects and keep track of my blogs. My personal website is where I experiment with new technology and create things',
+    description: 'I created a personal website to showcase some of my personal projects and keep track of my blogs. My personal website is where I experiment with new technology and blog about things I have recently learned.',
     imageClassName: 'personal-website',
     tags: ['SCSS', 'React', 'Material UI', 'NextJS', 'Figma'],
     sourceCodeUrl: 'https://github.com/ClothierNamedJeremiah/personal-website',
@@ -24,7 +24,7 @@ const PROJECTS = [
   },
   {
     title: 'Student Loan Savings',
-    description: 'I wanted to help educate students and show them how they could be saving money on their loans. I created and deployed a web application to AWS that shows students how much they could be saving over the lifetime of their student loans. Students can submit their data in seconds and instantly get information.',
+    description: 'I wanted to help educate students and show them how they could be saving money on their loans. I created and deployed a web application to AWS that shows students how much they could be saving over the lifetime of their student loans. Students can submit their data in seconds and instantly get information that could save them thousands of dollars.',
     imageClassName: 'student-loan-savings',
     tags: ['AWS', 'S3', 'Route 53', 'Cloudfront', 'React', 'Figma'],
     sourceCodeUrl: 'https://github.com/ClothierNamedJeremiah/student-loan-savings',
