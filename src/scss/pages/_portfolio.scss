@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .portfolio-container {
   display: flex;
   flex-direction: column;
@@ -52,7 +54,7 @@
     position: absolute;
     content: '';
     height: 2px;
-    width: 110vw;
+    width: 100vw / math.cos(11deg);
 
     background-color: $yellow;
     transform: rotate(11deg);
@@ -66,12 +68,6 @@
   position: relative;
   cursor: pointer;
   
-  @media screen and (min-width: 750px) {
-    // width: 450px;
-
-  }
-  
-  // height: 420px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -148,6 +144,10 @@
 
 .spotify-favorites {
   background-image: url('../../../public/images/spotify-favorites-large.png');
+}
+
+.personal-website {
+  background-image: url('../../../public/images/personal-website-large.png');
 }
 
 .student-loan-savings {
