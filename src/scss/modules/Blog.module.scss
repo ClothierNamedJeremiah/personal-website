@@ -1,0 +1,61 @@
+@import "../variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > .foo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    margin: 2em 0;
+
+    & > span {
+      flex-basis: auto;
+      margin: 0;
+      height: 65px;
+    }
+
+    & > p {
+      line-height: 1.42em;
+      margin-left: 1em;
+    }
+  }
+  
+  & > .main {
+    margin: 3% 0;
+  }
+
+  & > .more-coming-soon {
+    align-self: center;
+    font-weight: 700;
+    letter-spacing: 1.42px;
+    opacity: 0.6;
+  }
+}
+
+
+.article {
+  max-width: 650px;
+
+  & + & {
+    margin-top: 3em;
+  }
+
+  & .title {
+    margin-bottom: 0.25em;
+    
+    & > a {
+      transition: color 0.4s ease;
+    }
+
+    & > a:hover {
+      color: $yellow-golden;
+    }
+  }
+}
+
+
+

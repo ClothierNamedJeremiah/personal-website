@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 1em;
-  scroll-snap-type: y mandatory;
 
   @media screen and (min-width: 750px) {
     margin-top: 2em;
@@ -29,12 +28,10 @@
 }
 
 // TODO: make project showcase .scss
-
 .project-showcase {
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-align: start;
 
   & > .project-header {
     align-self: flex-start;

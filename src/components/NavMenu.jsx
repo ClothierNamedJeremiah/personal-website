@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const NAV_LINKS = {
   home: '/',
   blog: '/blog',
-  bookshelf: '/bookshelf',
+  // bookshelf: '/bookshelf',
   portfolio: '/portfolio',
 };
 

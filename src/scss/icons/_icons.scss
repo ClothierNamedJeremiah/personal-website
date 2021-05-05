@@ -8,6 +8,7 @@ $url-logo-dark: url('../../../public/images/logo-dark.svg');
 }
 
 .mi-logo {
+  display: inline-block;
   height: 50px;
   width: 50px;
   background-size: contain;

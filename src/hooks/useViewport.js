@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const useViewport = () => {
   const [width, setWidth] = useState(0);
@@ -15,9 +15,7 @@ const useViewport = () => {
     };
   });
 
-  // Prevent browser from painting without the 'width' state being
-  // set properly
-  useLayoutEffect(() => {
+  useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
 

@@ -31,6 +31,7 @@
     "@iconify/icons-codicon": "^1.1.10",
     "@iconify/icons-feather": "^1.1.0",
     "@iconify/react": "^1.1.4",
+    "core-js": "^3.11.2",
     "next": "^10.1.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
