@@ -4,27 +4,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2em;
 
-  & > .foo {
-    display: flex;
-    align-items: center;
+  .summary {
     width: 100%;
-    max-width: 650px;
-    margin: 2em 0;
-
-    & > span {
-      flex-basis: auto;
-      margin: 0;
-      height: 65px;
-    }
-
-    & > p {
-      line-height: 1.42em;
-      margin-left: 1em;
-    }
+    max-width: 750px;
+    margin-bottom: 3em;
+    line-height: 1.42em;
   }
-  
-  & > .main {
+    
+    & > .main {
     margin: 3% 0;
   }
 

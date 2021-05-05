@@ -11,14 +11,13 @@ const Blog = (props) => {
 
   return (
     <div className={styles.container}>
-      <aside className={styles.foo}>
-        <span className="j" />
-        <p>
-          Personal blog by Jeremiah Clothier.
-          <br />
-          I explain things with code, pictures, and words.
-        </p>
-      </aside>
+      <h1 className="portfolio-title fs-large fc-yellow">
+        Blogs I've Written
+      </h1>
+      <p className={styles.summary}>
+        CSS tutorials, in-depth solutions to coding questions, front-end designs,
+        React fundamentals, and everything in between.
+      </p>
       <main className={styles.main}>
         {blogs.map(({ title, shortDescription, datePublished, estimatedTimeToRead, blogPostUrl }) => (
           <article key={title} className={styles.article}>
