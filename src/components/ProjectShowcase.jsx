@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ProjectShowcaseMobile = (props) => {
+import styles from '../scss/modules/ProjectShowcase.module.scss';
+
+const ProjectShowcase = (props) => {
   const {
     title,
     description,
@@ -12,20 +14,19 @@ const ProjectShowcaseMobile = (props) => {
   } = props;
 
   return (
-    <div className="project-showcase">
-      <div className="project-header">
+    <article className={styles.container}>
+      <header className={styles.header}>
         <h2 className="fs-normal fc-yellow fw-normal">Project Showcase</h2>
         <h3 className="fw-normal">{title}</h3>
-      </div>
-      {/* <img className="project-preview-image" src={image} alt={`landing page for ${title} project`} /> */}
-      <div className={`project-preview-image ${imageClassName}`} />
-      <p className="project-description">{description}</p>
-      <ul className="project-tags">
+      </header>
+      <div className={`${styles['preview-image']} ${styles[imageClassName]}`} />
+      <p className={styles.description}>{description}</p>
+      <ul className={styles.tags}>
         {tags.map((tag) => (
           <li key={tag}>{tag}</li>
         ))}
       </ul>
-      <div className="project-showcase-actions">
+      <div className={styles.links}>
         <a
           className="btn-link-base btn-link-primary"
           href={sourceCodeUrl}
@@ -39,11 +40,11 @@ const ProjectShowcaseMobile = (props) => {
           Live Website
         </a>
       </div>
-    </div>
+    </article>
   );
 };
 
-ProjectShowcaseMobile.propTypes = {
+ProjectShowcase.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageClassName: PropTypes.string.isRequired,
@@ -52,4 +53,4 @@ ProjectShowcaseMobile.propTypes = {
   liveSiteUrl: PropTypes.string.isRequired,
 };
 
-export default ProjectShowcaseMobile;
+export default ProjectShowcase;

@@ -2,10 +2,12 @@ import React from 'react';
 
 import Welcome from '../components/Welcome';
 
+import styles from '../scss/pages/Home.module.scss';
+
 const Home = () => (
-  <main className="home-container">
+  <div className={styles.container}>
     <Welcome />
-  </main>
+  </div>
 );
 
 export default Home;

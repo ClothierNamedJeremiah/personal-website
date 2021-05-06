@@ -1,4 +1,6 @@
-.home-container {
+@import "../variables";
+
+.container {
   display: grid;
   grid-auto-rows: minmax(calc(100vh - #{$height-nav-small}), auto);
   

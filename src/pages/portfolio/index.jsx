@@ -1,28 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ProjectShowcaseMobile from '../../components/ProjectShowcaseMobile';
-import ProjectShowcaseDesktop from '../../components/ProjectShowcaseDesktop';
+import ProjectShowcase from '../../components/ProjectShowcase';
 
-import useViewport from '../../hooks/useViewport';
 import getPortfolioProjects from '../../data/portfolio';
+
+import styles from '../../scss/pages/Portfolio.module.scss';
 
 const Portfolio = (props) => {
   const { projects } = props;
 
-  const width = useViewport();
-  const widthBreakpoint = 1100;
-
-  let ProjectShowcase;
-  if (width < widthBreakpoint) {
-    ProjectShowcase = ProjectShowcaseMobile;
-  } else {
-    ProjectShowcase = ProjectShowcaseDesktop;
-  }
-
   return (
-    <div className="portfolio-container">
-      <h1 className="portfolio-title fs-large fc-yellow">
+    <div className={styles.container}>
+      <h1 className={`${styles.title} fs-large fc-yellow`}>
         Some Things I&apos;ve Built
       </h1>
       {projects.map(({ title, description, imageClassName, tags, sourceCodeUrl, liveSiteUrl }) => (
@@ -36,7 +26,7 @@ const Portfolio = (props) => {
             sourceCodeUrl={sourceCodeUrl}
             liveSiteUrl={liveSiteUrl}
           />
-          <span className="project-separator-angled" />
+          <span className={styles.separator} />
         </React.Fragment>
       ))}
     </div>

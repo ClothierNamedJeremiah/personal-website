@@ -1,0 +1,49 @@
+@use "sass:math";
+
+@import "../variables";
+@import "../mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+
+  @media screen and (min-width: 750px) {
+    margin-top: 2em;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &::after {
+    content: '';
+    
+    display: inline-block;
+    height: 2px;
+    flex-grow: 1;
+    margin-left: 0.5em;
+    background-color: $yellow;
+  }
+}
+
+.separator {
+  display: inline-flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  margin: 10em 0;
+  
+  &::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100vw / math.cos(11deg); // Need to calculate hypotenuse (math is cool)
+
+    background-color: $yellow;
+    transform: rotate(11deg);
+  }
+}
