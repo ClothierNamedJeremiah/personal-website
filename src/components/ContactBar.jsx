@@ -2,10 +2,12 @@ import React from 'react';
 
 import SideElement from './shared/SideElement';
 
+import styles from '../scss/modules/ContactBar.module.scss';
+
 const Contactbar = () => (
   <SideElement side="right">
     <a
-      className="contact-bar"
+      className={styles.link}
       href="mailto:clothiernamedjeremiah@gmail.com"
       target="_blank"
       rel="noreferrer"

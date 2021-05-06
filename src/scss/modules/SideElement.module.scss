@@ -1,4 +1,7 @@
-.side-element {
+@import "../_variables";
+@import "../_mixins";
+
+.container {
   @include vertical-line;
 
   $side-space: 5px;

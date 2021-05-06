@@ -57,7 +57,9 @@ const NavBar = () => {
     <>
       <div className="nav-container">
         <nav className="nav">
-          <span className="mi-logo mi-logo-light" />
+          <Link href="/">
+            <a className="mi-logo mi-logo-light" href="/" />
+          </Link>
           <ul className="nav-items fc-dark-purple">
             {Object.keys(NAV_LINKS).map((key) => (
               <li key={key} className="nav-item">
