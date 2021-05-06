@@ -1,4 +1,6 @@
-.nav-menu {
+@import "../variables";
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,14 +12,14 @@
   }
 }
 
-.nav-menu-line {
+.separator {
   height: 2px;
   width: 90%;
 
   background-color: $dark-purple;
 }
 
-.nav-menu-items {
+.links {
   margin: 0.5em 0;
   padding: 0;
   text-indent: 0;
@@ -29,11 +31,11 @@
   font-size: 22px;
 }
 
-.nav-menu-item {
+.link-wrapper {
   padding: 8px 16px;
 }
 
-.nav-menu-link {
+.link {
   text-transform: capitalize;
   line-height: 1.2em;
 

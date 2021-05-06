@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import MenuIcon from './shared/MenuIcon';
 import NavMenu from './NavMenu';
 
+import styles from '../scss/modules/NavBar.module.scss';
+
 const NAV_LINKS = {
   home: '/',
   blog: '/blog',
@@ -18,7 +20,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const wasMenuOpened = isMenuOpen;
-    const navContainer = document.querySelector('.nav-container');
+    const navContainer = document.querySelector(`.${styles.container}`);
 
     const { scrollHeight, style } = navContainer;
 
@@ -55,17 +57,21 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="nav-container">
-        <nav className="nav">
+      <div className={styles.container}>
+        <nav className={styles.nav}>
           <Link href="/">
             <a className="mi-logo mi-logo-light" href="/" />
           </Link>
-          <ul className="nav-items fc-dark-purple">
+          <ul className={`${styles.links} fc-dark-purple`}>
             {Object.keys(NAV_LINKS).map((key) => (
-              <li key={key} className="nav-item">
+              <li key={key}>
                 <Link href={NAV_LINKS[key]}>
                   <a
-                    className={router.pathname === NAV_LINKS[key] ? 'nav-link active' : 'nav-link'}
+                    className={
+                      router.pathname === NAV_LINKS[key]
+                        ? `${styles.link} ${styles.active}`
+                        : styles.link
+                    }
                     role="navigation"
                     href={NAV_LINKS[key]}
                   >
@@ -81,7 +87,7 @@ const NavBar = () => {
         <NavMenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
       </div>
       {isMenuOpen && (
-        <div className="backdrop" />
+        <div className={styles.backdrop} />
       )}
     </>
   );

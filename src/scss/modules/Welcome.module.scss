@@ -1,10 +1,10 @@
-.welcome-wrapper {
+.wrapper {
   display: flex;
   justify-content: center;
   
   margin-top: 5vh;
 
-  & > .welcome-container {
+  & > .container {
     display: flex;
     flex-wrap: wrap;
     max-width: 1240px;
@@ -34,7 +34,7 @@
   line-height: 1.24;
 }
 
-.welcome-links {
+.links {
   margin-top: 2em;
 }
 

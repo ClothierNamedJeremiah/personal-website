@@ -1,18 +1,20 @@
 import React from 'react';
 
+import styles from '../scss/modules/Welcome.module.scss';
+
 const Welcome = () => (
-  <div className="welcome-wrapper">
-    <div className="welcome-container">
+  <div className={styles.wrapper}>
+    <div className={styles.container}>
       <div>
         <span className="fs-normal fc-yellow">Hi, my name is</span>
-        <h1 className="fs-x-large title">Jeremiah Clothier</h1>
-        <h2 className="fs-large subtitle">I build things on the web for fun.</h2>
+        <h1 className={`${styles.title} fs-x-large`}>Jeremiah Clothier</h1>
+        <h2 className={`${styles.subtitle} fs-large`}>I build things on the web for fun.</h2>
         <p className="fs-normal fc-light-purple bio">
           I am a software engineer with a constant desire to figure out why
           and how things work the way they do. I enjoy building websites and
           teaching others along the way.
         </p>
-        <div className="welcome-links">
+        <div className={styles.links}>
           <a
             className="btn-link-base btn-link-primary"
             href="mailto:clothiernamedjeremiah@gmail.com"
@@ -23,7 +25,7 @@ const Welcome = () => (
           </a>
         </div>
       </div>
-      <aside className="j" />
+      <aside className={styles.j} />
     </div>
   </div>
 );
