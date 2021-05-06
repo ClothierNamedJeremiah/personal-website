@@ -14,7 +14,7 @@ const BLOGS = [
     blogPostUrl: 'https://clothiernamedjeremiah.medium.com/how-to-position-html-elements-properly-using-css-3fc559f6e5ff',
   },
   {
-    title: 'Creating a React Application from Scratch (2021)',
+    title: 'Creating a React Application from Scratch',
     shortDescription: 'Learn how to create your own react application with Babel, Webpack, and Hot Module Replacement.',
     datePublished: 'March 5, 2021',
     estimatedTimeToRead: '7 min read',
