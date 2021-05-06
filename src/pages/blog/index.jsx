@@ -11,7 +11,7 @@ const Blog = (props) => {
 
   return (
     <div className={styles.container}>
-      <h1 className="portfolio-title fs-large fc-yellow">
+      <h1 className={`${styles.title} fs-large fc-yellow`}>
         Blogs I've Written
       </h1>
       <p className={styles.summary}>

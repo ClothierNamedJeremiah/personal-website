@@ -6,7 +6,24 @@
   align-items: center;
   margin: 2em 0;
 
-  .summary {
+  & > .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  
+    &::after {
+      content: '';
+      
+      display: inline-block;
+      height: 2px;
+      flex-grow: 1;
+      margin-left: 0.5em;
+      background-color: $yellow;
+    }
+  }
+
+  & > .summary {
     width: 100%;
     max-width: 750px;
     margin-bottom: 3em;
