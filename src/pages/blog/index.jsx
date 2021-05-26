@@ -6,6 +6,21 @@ import getBlogPosts from '../../data/blogs';
 
 import styles from '../../scss/modules/Blog.module.scss';
 
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
 const Blog = (props) => {
   const { blogs } = props;
 
@@ -19,31 +34,38 @@ const Blog = (props) => {
         React fundamentals, and everything in between.
       </p>
       <main className={styles.main}>
-        {blogs.map(({ title, shortDescription, datePublished, estimatedTimeToRead, blogPostUrl }) => (
-          <article key={title} className={styles.article}>
-            <header className={styles.header}>
-              <h3 className={`fc-yellow fs-normal ${styles.title}`}>
-                <Link href={blogPostUrl}>
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href={blogPostUrl}
-                  >
-                    {title}
-                  </a>
-                </Link>
-              </h3>
-              <small>
-                {datePublished}
-                &nbsp;• ☕️ &nbsp;
-                {estimatedTimeToRead}
-              </small>
-            </header>
-            <p className={styles.description}>
-              {shortDescription}
-            </p>
-          </article>
-        ))}
+        {blogs.map(({ title, shortDescription, datePublished, estimatedTimeToRead, blogPostUrl }) => {
+          const date = new Date(datePublished);
+          const monthName = months[date.getMonth()];
+
+          const formattedDateString = `${monthName} ${date.getDate()}, ${date.getFullYear()}`;
+
+          return (
+            <article key={title} className={styles.article}>
+              <header className={styles.header}>
+                <h3 className={`fc-yellow fs-normal ${styles.title}`}>
+                  <Link href={blogPostUrl}>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={blogPostUrl}
+                    >
+                      {title}
+                    </a>
+                  </Link>
+                </h3>
+                <small>
+                  <time dateTime={datePublished}>{formattedDateString}</time>
+                  &nbsp;• ☕️ &nbsp;
+                  {estimatedTimeToRead}
+                </small>
+              </header>
+              <p className={styles.description}>
+                {shortDescription}
+              </p>
+            </article>
+          );
+        })}
       </main>
       <aside className={styles['more-coming-soon']}>
         <small>
