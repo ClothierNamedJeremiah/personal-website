@@ -101,6 +101,11 @@ const skillsMap = [
   },
 ];
 
+const AWSLoader = ({ src, width, quality }) => {
+  // return `https://jeremiah-clothier.s3-us-west-2.amazonaws.com/${src}`;
+  return `https://jeremiah-clothier.s3-us-west-2.amazonaws.com${src}`;
+}
+
 const Skills = () => (
   <div className={styles.wrapper}>
     <section>
@@ -117,6 +122,7 @@ const Skills = () => (
             <div className={styles['skill-wrapper']}>
               <div className={styles.skill}>
                 <Image
+                  loader={AWSLoader}
                   src={`/images/skills/${src}`}
                   alt={alt}
                   layout="fill"
