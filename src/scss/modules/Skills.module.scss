@@ -1,0 +1,95 @@
+@import "../variables";
+@import "../mixins";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  max-width: 750px;
+  margin: -0 auto 2em auto;
+
+  position: relative;
+  top: -1em;
+
+  text-align: center;
+  line-height: 1.48em;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &::after {
+    content: '';
+    
+    display: inline-block;
+    height: 2px;
+    flex-grow: 1;
+    margin-left: 0.5em;
+    background-color: $yellow;
+  }
+}
+
+.skills-list {
+  @include gap(2em);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  list-style-type: none;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+
+  & > li {
+    flex-basis: 100px;
+
+    @media screen and (min-width: 750px) {
+      flex-basis: 125px;
+    }
+  }
+}
+
+.skill-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100px;
+  width: 100px;
+  background-color: $frost-white;
+  background-color: $light-purple;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+
+  @media screen and (min-width: 750px) {
+    height: 125px;
+    width: 125px;
+  }
+}
+
+.skill {
+  position: relative;
+  height: 75%;
+  width: 75%;
+  margin: 1.75em;
+}
+
+.skill-description {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.jquery,
+.selenium {
+  filter: brightness(0);
+  border-radius: 4px;
+}
+
+.java, .azure {
+  filter: brightness(1) saturate(150%);
+}
