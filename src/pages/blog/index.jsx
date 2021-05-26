@@ -25,7 +25,7 @@ const Blog = (props) => {
   const { blogs } = props;
 
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <h1 className={`${styles.title} fs-large fc-yellow`}>
         Blogs I've Written
       </h1>
@@ -33,7 +33,7 @@ const Blog = (props) => {
         CSS tutorials, in-depth solutions to coding questions, front-end designs,
         React fundamentals, and everything in between.
       </p>
-      <main className={styles.main}>
+      <article className={styles['blogs-container']}>
         {blogs.map(({ title, shortDescription, datePublished, estimatedTimeToRead, blogPostUrl }) => {
           const date = new Date(datePublished);
           const monthName = months[date.getMonth()];
@@ -66,13 +66,13 @@ const Blog = (props) => {
             </article>
           );
         })}
-      </main>
+      </article>
       <aside className={styles['more-coming-soon']}>
         <small>
           More coming soon...
         </small>
       </aside>
-    </div>
+    </main>
   );
 };
 
