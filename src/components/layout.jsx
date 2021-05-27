@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
       <meta charSet="utf-8" />
       <meta name="description" content="Jeremiah Clothier's personal website and porfolio" />
       <meta name="theme-color" content="#F9DC78" />
-      <meta name="keywords" content="Jeremiah Clothier, Software Engineer, Personal Website" />
+      <meta name="keywords" content="Jeremiah Clothier, Software Engineer, Software, Developer, Personal Website" />
       <meta name="author" content="Jeremiah Clothier" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Jeremiah Clothier" />
