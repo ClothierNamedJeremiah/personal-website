@@ -150,11 +150,11 @@ const Skills = () => (
       </article>
       <div className={styles.separator} />
       <article>
-      <p className={styles.description}>
-        Learning about new technologies are having the opportunity to use so many different
-        technologies is one of my favorite things about being a software engineer. Here are some
-        other technologies I have enjoy using, but do not get to use on a day-to-day basis.
-      </p>
+        <p className={styles.description}>
+          Learning about new technologies are having the opportunity to use so many different
+          technologies is one of my favorite things about being a software engineer. Here are some
+          other technologies I enjoy using, but do not use on a day-to-day basis.
+        </p>
         <ul className={styles['skills-list']}>
           {lessComfortableSkills.map(({
             src, alt, description, className,
