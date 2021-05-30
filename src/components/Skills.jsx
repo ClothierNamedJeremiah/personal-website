@@ -151,7 +151,7 @@ const Skills = () => (
       <div className={styles.separator} />
       <article>
         <p className={styles.description}>
-          Learning about new technologies are having the opportunity to use so many different
+          Learning about new technologies and having the opportunity to use so many different
           technologies is one of my favorite things about being a software engineer. Here are some
           other technologies I enjoy using, but do not use on a day-to-day basis.
         </p>
