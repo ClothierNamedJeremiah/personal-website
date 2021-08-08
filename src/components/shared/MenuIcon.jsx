@@ -4,11 +4,18 @@ import PropTypes from 'prop-types';
 const MenuIcon = (props) => {
   const { isMenuOpen, setMenuOpen } = props;
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      setMenuOpen((prevState) => !prevState);
+    }
+  };
+
   return (
     <div className="menu-wrapper">
       <div
-        className={isMenuOpen ? "menu-icon active" : "menu-icon"}
+        className={isMenuOpen ? 'menu-icon active' : 'menu-icon'}
         onClick={() => setMenuOpen((prevState) => !prevState)}
+        onKeyDown={handleKeyDown}
         role="menuitem"
         tabIndex={-1}
       >

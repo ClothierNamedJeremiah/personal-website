@@ -15,25 +15,34 @@ const Portfolio = (props) => {
       <h1 className={`${styles.title} fs-large fc-yellow`}>
         Some Things I&apos;ve Built
       </h1>
-      {projects.map(({ title, description, imageClassName, tags, sourceCodeUrl, liveSiteUrl }) => (
-        <React.Fragment key={title}>
-          <ProjectShowcase
-            key={title}
-            title={title}
-            description={description}
-            imageClassName={imageClassName}
-            tags={tags}
-            sourceCodeUrl={sourceCodeUrl}
-            liveSiteUrl={liveSiteUrl}
-          />
-          <span className={styles.separator} />
-        </React.Fragment>
-      ))}
+      {projects.map(
+        ({
+          title,
+          description,
+          imageClassName,
+          tags,
+          sourceCodeUrl,
+          liveSiteUrl,
+        }) => (
+          <React.Fragment key={title}>
+            <ProjectShowcase
+              key={title}
+              title={title}
+              description={description}
+              imageClassName={imageClassName}
+              tags={tags}
+              sourceCodeUrl={sourceCodeUrl}
+              liveSiteUrl={liveSiteUrl}
+            />
+            <span className={styles.separator} />
+          </React.Fragment>
+        ),
+      )}
     </div>
   );
 };
 
-const projectExactShape = PropTypes.exact({
+const Project = PropTypes.exact({
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageClassName: PropTypes.string.isRequired,
@@ -43,10 +52,10 @@ const projectExactShape = PropTypes.exact({
 });
 
 Portfolio.propTypes = {
-  projects: PropTypes.arrayOf(projectExactShape).isRequired,
+  projects: PropTypes.arrayOf(Project).isRequired,
 };
 
-export const getStaticProps = async (context) => ({
+export const getStaticProps = async () => ({
   props: getPortfolioProjects(), // will be passed to the page component as props
 });
 

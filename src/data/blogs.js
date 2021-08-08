@@ -1,31 +1,39 @@
 const BLOGS = [
   {
     title: 'How to easily hide a HTML element',
-    shortDescription: 'There are three easy ways to hide an element using CSS; each of them a little different than the other.',
+    shortDescription:
+      'There are three easy ways to hide an element using CSS; each of them a little different than the other.',
     datePublished: '05-29-2021',
     estimatedTimeToRead: '3 min read',
-    blogPostUrl: 'https://clothiernamedjeremiah.medium.com/how-to-easily-hide-an-html-element-9105aee25612?sk=fe6471df1d95b1bad809c3251ac170a9',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/how-to-easily-hide-an-html-element-9105aee25612?sk=fe6471df1d95b1bad809c3251ac170a9',
   },
   {
     title: 'A simple solution to optimize React re-renders',
-    shortDescription: 'Without using: React.memo, useMemo, PureComponent, or shouldComponentUpdate.',
+    shortDescription:
+      'Without using: React.memo, useMemo, PureComponent, or shouldComponentUpdate.',
     datePublished: '05-05-2021',
     estimatedTimeToRead: '5 min read',
-    blogPostUrl: 'https://clothiernamedjeremiah.medium.com/a-simple-solution-to-optimize-react-re-renders-3fce6713ccc8?sk=86e936de9fb90f62912c7f20ed2d7231',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/a-simple-solution-to-optimize-react-re-renders-3fce6713ccc8?sk=86e936de9fb90f62912c7f20ed2d7231',
   },
   {
     title: "Understanding the CSS 'position' property",
-    shortDescription: 'Learn the difference between: static, relative, absolute, sticky, and fixed positioning.',
+    shortDescription:
+      'Learn the difference between: static, relative, absolute, sticky, and fixed positioning.',
     datePublished: '04-21-2021',
     estimatedTimeToRead: '5 min read',
-    blogPostUrl: 'https://clothiernamedjeremiah.medium.com/how-to-position-html-elements-properly-using-css-3fc559f6e5ff',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/how-to-position-html-elements-properly-using-css-3fc559f6e5ff',
   },
   {
     title: 'Creating a react application from scratch',
-    shortDescription: 'Learn how to create your own react application with Babel, Webpack, and Hot Module Replacement.',
+    shortDescription:
+      'Learn how to create your own react application with Babel, Webpack, and Hot Module Replacement.',
     datePublished: '04-05-2021',
     estimatedTimeToRead: '7 min read',
-    blogPostUrl: 'https://clothiernamedjeremiah.medium.com/creating-a-react-app-scratch-a5d5ef8ff2bc',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/creating-a-react-app-scratch-a5d5ef8ff2bc',
   },
 ];
 

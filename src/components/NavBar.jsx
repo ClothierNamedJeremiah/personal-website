@@ -35,9 +35,13 @@ const NavBar = () => {
      */
     if (wasMenuOpened) {
       style.height = `${scrollHeight}px`;
-      navContainer.addEventListener('transitionend', () => {
-        style.height = 'auto';
-      }, { once: true });
+      navContainer.addEventListener(
+        'transitionend',
+        () => {
+          style.height = 'auto';
+        },
+        { once: true },
+      );
     } else {
       const temp = style.transition;
       style.transition = '';
@@ -59,9 +63,7 @@ const NavBar = () => {
     <>
       <div className={styles.container}>
         <nav className={styles.nav}>
-          <Link href="/">
-            <a className="mi-logo mi-logo-light" href="/" />
-          </Link>
+          <span className="mi-logo mi-logo-light" />
           <ul className={`${styles.links} fc-dark-purple`}>
             {Object.keys(NAV_LINKS).map((key) => (
               <li key={key}>
@@ -72,7 +74,6 @@ const NavBar = () => {
                         ? `${styles.link} ${styles.active}`
                         : styles.link
                     }
-                    role="navigation"
                     href={NAV_LINKS[key]}
                   >
                     {key}
@@ -86,9 +87,7 @@ const NavBar = () => {
         </nav>
         <NavMenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
       </div>
-      {isMenuOpen && (
-        <div className={styles.backdrop} />
-      )}
+      {isMenuOpen && <div className={styles.backdrop} />}
     </>
   );
 };

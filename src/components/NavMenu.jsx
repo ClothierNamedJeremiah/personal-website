@@ -30,7 +30,6 @@ function NavMenu(props) {
                     : styles.link
                 }
                 onClick={() => setMenuOpen(false)}
-                role="navigation"
                 href={NAV_LINKS[key]}
               >
                 {key}

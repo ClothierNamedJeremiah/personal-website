@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
 
@@ -16,11 +17,17 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Layout>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
       </Layout>
     </>
   );
 }
+
+App.propTypes = {
+  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]).isRequired,
+  pageProps: PropTypes.objectOf(PropTypes.any).isRequired,
+};
