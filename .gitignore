@@ -1,10 +1,14 @@
 .DS_Store
+.vscode
 node_modules/
 TODO.md
 
 # Next.js
 out/
 .next/
+
+# Coverage Reports
+test-coverage/
 
 # Under Developed
 archive/
