@@ -1,10 +1,10 @@
 import React from 'react';
 
-import SideElement from './shared/SideElement';
+import SideElement from '../shared/SideElement';
 
-import styles from '../scss/modules/ContactBar.module.scss';
+import styles from './ContactBar.module.scss';
 
-const Contactbar = () => (
+const ContactBar = () => (
   <SideElement side="right">
     <a
       className={styles.link}
@@ -17,4 +17,4 @@ const Contactbar = () => (
   </SideElement>
 );
 
-export default Contactbar;
+export default ContactBar;

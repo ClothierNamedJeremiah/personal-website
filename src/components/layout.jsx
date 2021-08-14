@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 
-import ContactBar from './ContactBar';
-import SocialBar from './SocialBar';
+import ContactBar from 'components/ContactBar';
+import SocialBar from 'components/SocialBar';
 import NavBar from './NavBar';
 
 const Layout = ({ children }) => (
