@@ -8,4 +8,4 @@ out/
 
 # Under Developed
 archive/
-src/data/testimonials
+src/data/testimonials.js
