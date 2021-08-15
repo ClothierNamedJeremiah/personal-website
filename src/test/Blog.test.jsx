@@ -5,7 +5,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import Blog, { getStaticProps } from './index';
+import Blog, { getStaticProps } from 'pages/blog';
 
 describe('Blog', () => {
   test('renders all blogs', async () => {

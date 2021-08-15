@@ -11,7 +11,7 @@ import {
   getByText,
 } from '@testing-library/react';
 
-import Portfolio, { getStaticProps } from './index';
+import Portfolio, { getStaticProps } from 'pages/portfolio';
 
 describe('Portfolio', () => {
   test('renders all projects', async () => {
