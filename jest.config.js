@@ -21,4 +21,11 @@ module.exports = {
     '\\.(css|less|scss)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['./jest.setup.js'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/.next/',
+    '/.vscode/',
+    '/archive/',
+    '/out/',
+  ],
 };

@@ -8,6 +8,11 @@ module.exports = {
   future: {
     webpack5: true,
   },
+  /**
+   * Explicitly setting files in pages/ directory so that next.js builds don't bundle
+   * test files
+   */
+  pageExtensions: ['index.jsx', '_app.jsx', '_document.jsx'],
   reactStrictMode: true,
   webpack: (config, { dev, isServer }) => {
     if (!isServer && dev) {
