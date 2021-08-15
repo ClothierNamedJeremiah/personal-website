@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ProjectShowcase from '../../components/ProjectShowcase';
+import ProjectShowcase from 'components/ProjectShowcase';
 
-import getPortfolioProjects from '../../data/portfolio';
+import getPortfolioProjects from 'data/portfolio';
 
-import styles from '../../scss/pages/Portfolio.module.scss';
+import styles from 'scss/pages/Portfolio.module.scss';
 
 const Portfolio = (props) => {
   const { projects } = props;

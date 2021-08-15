@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from '../scss/modules/ProjectShowcase.module.scss';
+import styles from 'scss/modules/ProjectShowcase.module.scss';
 
 const ProjectShowcase = (props) => {
   const {
@@ -27,16 +27,10 @@ const ProjectShowcase = (props) => {
         ))}
       </ul>
       <div className={styles.links}>
-        <a
-          className="btn-link-base btn-link-primary"
-          href={sourceCodeUrl}
-        >
+        <a className="btn-link-base btn-link-primary" href={sourceCodeUrl}>
           Source Code
         </a>
-        <a
-          className="btn-link-base btn-link-primary"
-          href={liveSiteUrl}
-        >
+        <a className="btn-link-base btn-link-primary" href={liveSiteUrl}>
           Live Website
         </a>
       </div>

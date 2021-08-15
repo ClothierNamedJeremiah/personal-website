@@ -1,4 +1,4 @@
-@import '../variables';
+@import 'scss/variables';
 
 .container {
   background-color: $frost-white;
@@ -25,7 +25,6 @@
 
   height: $height-nav-small;
   padding: 0 16px;
-  
 
   @media screen and (min-width: 750px) {
     height: $height-nav;
@@ -36,7 +35,7 @@
   display: none;
   list-style: none;
   user-select: none;
-  
+
   font-size: 22px;
   letter-spacing: 1.25px;
 
@@ -54,7 +53,7 @@
   text-transform: capitalize;
   border-top: solid 4px transparent;
   border-bottom: solid 4px transparent;
-  
+
   transition: all 0.4s ease;
 
   &:hover {
@@ -72,7 +71,6 @@
   }
 }
 
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -81,7 +79,7 @@
   right: 0;
   z-index: 999;
 
-  background-color: rgba(0, 0, 0, 0.90);
+  background-color: rgba(0, 0, 0, 0.9);
 
   @media screen and (min-width: 750px) {
     display: none;

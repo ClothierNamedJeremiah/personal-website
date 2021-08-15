@@ -2,17 +2,25 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import MenuIcon from './shared/MenuIcon';
-import NavMenu from './NavMenu';
+import MenuIcon from 'components/shared/MenuIcon';
+import NavMenu from 'components/NavMenu';
 
-import styles from '../scss/modules/NavBar.module.scss';
+import styles from './NavBar.module.scss';
 
-const NAV_LINKS = {
-  home: '/',
-  blog: '/blog',
-  // bookshelf: '/bookshelf',
-  portfolio: '/portfolio',
-};
+export const NAV_LINKS = [
+  {
+    href: '/',
+    displayText: 'home',
+  },
+  {
+    href: '/blog',
+    displayText: 'blog',
+  },
+  {
+    href: '/portfolio',
+    displayText: 'portfolio',
+  },
+];
 
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -64,28 +72,32 @@ const NavBar = () => {
       <div className={styles.container}>
         <nav className={styles.nav}>
           <span className="mi-logo mi-logo-light" />
-          <ul className={`${styles.links} fc-dark-purple`}>
-            {Object.keys(NAV_LINKS).map((key) => (
-              <li key={key}>
-                <Link href={NAV_LINKS[key]}>
-                  <a
-                    className={
-                      router.pathname === NAV_LINKS[key]
-                        ? `${styles.link} ${styles.active}`
-                        : styles.link
-                    }
-                    href={NAV_LINKS[key]}
-                  >
-                    {key}
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {!isMenuOpen && (
+            <ul className={`${styles.links} fc-dark-purple`}>
+              {NAV_LINKS.map(({ href, displayText }) => (
+                <li key={displayText}>
+                  <Link href={href}>
+                    <a
+                      className={
+                        router.pathname === href
+                          ? `${styles.link} ${styles.active}`
+                          : styles.link
+                      }
+                      href={href}
+                    >
+                      {displayText}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
 
           <MenuIcon isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
         </nav>
-        <NavMenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
+        {isMenuOpen && (
+          <NavMenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
+        )}
       </div>
       {isMenuOpen && <div className={styles.backdrop} />}
     </>

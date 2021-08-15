@@ -16,7 +16,7 @@ const MenuIcon = (props) => {
         className={isMenuOpen ? 'menu-icon active' : 'menu-icon'}
         onClick={() => setMenuOpen((prevState) => !prevState)}
         onKeyDown={handleKeyDown}
-        role="menuitem"
+        role="button"
         tabIndex={-1}
       >
         <div className="line" />

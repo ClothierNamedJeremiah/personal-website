@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import ContactBar from 'components/ContactBar';
 import SocialBar from 'components/SocialBar';
-import NavBar from './NavBar';
+import NavBar from 'components/NavBar';
 
 const Layout = ({ children }) => (
   <>

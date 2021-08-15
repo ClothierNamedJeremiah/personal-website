@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import getBlogPosts from '../../data/blogs';
+import getBlogPosts from 'data/blogs';
 
-import styles from '../../scss/modules/Blog.module.scss';
+import styles from 'scss/modules/Blog.module.scss';
 
 const months = [
   'January',
@@ -60,7 +60,7 @@ const Blog = (props) => {
                   <small>
                     <time dateTime={datePublished}>{formattedDateString}</time>
                     &nbsp;• ☕️ &nbsp;
-                    {estimatedTimeToRead}
+                    <span>{estimatedTimeToRead}</span>
                   </small>
                 </header>
                 <p className={styles.description}>{shortDescription}</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import styles from '../scss/modules/Skills.module.scss';
+import styles from 'scss/modules/Skills.module.scss';
 
 const comfortableSkills = [
   {
@@ -113,9 +113,8 @@ const lessComfortableSkills = [
   },
 ];
 
-const AWSLoader = ({ src }) => (
-  `https://jeremiah-clothier.s3-us-west-2.amazonaws.com${src}`
-);
+const AWSLoader = ({ src }) =>
+  `https://jeremiah-clothier.s3-us-west-2.amazonaws.com${src}`;
 
 const Skills = () => (
   <div className={styles.wrapper}>
@@ -123,13 +122,12 @@ const Skills = () => (
       <h3 className={`fs-large fc-yellow ${styles.title}`}>Technologies</h3>
       <article>
         <p className={styles.description}>
-          As a full-stack software engineer I get the opportunity to work with a bunch of new and
-          exciting technologies. Here is a list of technologies which I use on a day-to-day basis.
+          As a full-stack software engineer I get the opportunity to work with a
+          bunch of new and exciting technologies. Here is a list of technologies
+          which I use on a day-to-day basis.
         </p>
         <ul className={styles['skills-list']}>
-          {comfortableSkills.map(({
-            src, alt, description, className,
-          }) => (
+          {comfortableSkills.map(({ src, alt, description, className }) => (
             <li key={src}>
               <div className={styles['skill-wrapper']}>
                 <div className={styles.skill}>
@@ -151,14 +149,13 @@ const Skills = () => (
       <div className={styles.separator} />
       <article>
         <p className={styles.description}>
-          Learning about new technologies and having the opportunity to use so many different
-          technologies is one of my favorite things about being a software engineer. Here are some
-          other technologies I enjoy using, but do not use on a day-to-day basis.
+          Learning about new technologies and having the opportunity to use so
+          many different technologies is one of my favorite things about being a
+          software engineer. Here are some other technologies I enjoy using, but
+          do not use on a day-to-day basis.
         </p>
         <ul className={styles['skills-list']}>
-          {lessComfortableSkills.map(({
-            src, alt, description, className,
-          }) => (
+          {lessComfortableSkills.map(({ src, alt, description, className }) => (
             <li key={src}>
               <div className={styles['skill-wrapper']}>
                 <div className={styles.skill}>

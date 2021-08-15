@@ -11,7 +11,12 @@
     "out/",
     "public/"
   ],
-  "extends": ["plugin:react/recommended", "airbnb", "plugin:jest/recommended"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "airbnb",
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true

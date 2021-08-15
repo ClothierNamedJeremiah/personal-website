@@ -8,7 +8,6 @@ import styles from '../scss/modules/NavMenu.module.scss';
 const NAV_LINKS = {
   home: '/',
   blog: '/blog',
-  // bookshelf: '/bookshelf',
   portfolio: '/portfolio',
 };
 
@@ -17,7 +16,7 @@ function NavMenu(props) {
   const router = useRouter();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="navmenu">
       <div className={styles.separator} />
       <ul className={`${styles.links} fc-dark-purple`}>
         {Object.keys(NAV_LINKS).map((key) => (
