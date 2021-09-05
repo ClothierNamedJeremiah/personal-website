@@ -29,10 +29,6 @@ const Blog = (props) => {
       <h1 className={`${styles.title} fs-large fc-yellow`}>
         Blogs I&apos;ve Written
       </h1>
-      <p className={styles.summary}>
-        CSS tutorials, in-depth solutions to coding questions, front-end
-        designs, React fundamentals, and everything in between.
-      </p>
       <article className={styles['blogs-container']}>
         {blogs.map(
           ({

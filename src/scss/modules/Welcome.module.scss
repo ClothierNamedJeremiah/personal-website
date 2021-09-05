@@ -24,6 +24,10 @@
       align-items: initial;
     }
   }
+
+  @media screen and (min-width: 750px) {
+    margin-top: 8vw;
+  }
 }
 
 .title,

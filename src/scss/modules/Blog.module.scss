@@ -1,4 +1,4 @@
-@import "../variables";
+@import '../variables';
 
 .container {
   display: flex;
@@ -11,10 +11,10 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  
+
     &::after {
       content: '';
-      
+
       display: inline-block;
       height: 2px;
       flex-grow: 1;
@@ -23,14 +23,7 @@
     }
   }
 
-  & > .summary {
-    width: 100%;
-    max-width: 750px;
-    margin-bottom: 3em;
-    line-height: 1.42em;
-  }
-    
-    & > .blogs-container {
+  & > .blogs-container {
     margin: 3% 0;
   }
 
@@ -42,7 +35,6 @@
   }
 }
 
-
 .article {
   max-width: 650px;
 
@@ -52,7 +44,7 @@
 
   & .title {
     margin-bottom: 0.25em;
-    
+
     & > a {
       transition: color 0.4s ease;
     }
@@ -62,6 +54,3 @@
     }
   }
 }
-
-
-
