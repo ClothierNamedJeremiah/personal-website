@@ -39,6 +39,7 @@
     "@iconify/icons-codicon": "^1.1.10",
     "@iconify/icons-feather": "^1.1.0",
     "@iconify/react": "^1.1.4",
+    "animejs": "^3.2.1",
     "core-js": "^3.11.2",
     "eslint-webpack-plugin": "^3.0.1",
     "next": "^10.1.3",

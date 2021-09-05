@@ -3,6 +3,10 @@
   display: flex;
   justify-content: center;
 
+  position: relative;
+  bottom: -150px;
+  opacity: 0;
+
   @media screen and (min-width: 750px) {
     margin: $height-nav 75px 0 75px;
   }

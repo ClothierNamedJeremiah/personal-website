@@ -1,11 +1,11 @@
-@import "../_variables";
-@import "../_mixins";
+@import '../_variables';
+@import '../_mixins';
 
 .container {
   @include vertical-line;
 
   $side-space: 5px;
-  
+
   position: fixed;
   bottom: 0;
   width: 45px;
@@ -18,11 +18,15 @@
   opacity: 0.8;
   letter-spacing: 1.77px;
 
-  &[data-side="left"] {
+  &.animated {
+    opacity: 0;
+  }
+
+  &[data-side='left'] {
     left: $side-space;
   }
 
-  &[data-side="right"] {
+  &[data-side='right'] {
     right: $side-space;
   }
 

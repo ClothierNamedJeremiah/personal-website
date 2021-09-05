@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from 'scss/modules/SideElement.module.scss';
 
 const SideElement = ({ children, side }) => (
-  <aside className={styles.container} data-side={side}>
+  <aside className={`${styles.container} ${styles.animated}`} data-side={side}>
     {children}
   </aside>
 );

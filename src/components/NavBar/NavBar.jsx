@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import anime from 'animejs';
 
 import MenuIcon from 'components/shared/MenuIcon';
 import NavMenu from 'components/NavMenu';
@@ -25,6 +26,24 @@ export const NAV_LINKS = [
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
+
+  const animate = () => {
+    const loader = anime.timeline({});
+
+    loader.add({
+      targets: `.${styles.container}.${styles.animated}`,
+      translateY: 80,
+      delay: 100,
+      duration: 400,
+      easing: 'easeInOutQuad',
+    });
+
+    loader.add({
+      targets: ['.mi-logo', '.menu-wrapper', `.${styles.links} > li`],
+      translateY: 80,
+      delay: anime.stagger(100, { start: 300 }),
+    });
+  };
 
   useEffect(() => {
     const wasMenuOpened = isMenuOpen;
@@ -67,11 +86,15 @@ const NavBar = () => {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    animate();
+  }, []);
+
   return (
     <>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles.animated}`}>
         <nav className={styles.nav}>
-          <span className="mi-logo mi-logo-light" />
+          <span className={`mi-logo mi-logo-light ${styles.animated}`} />
           {!isMenuOpen && (
             <ul className={`${styles.links} fc-dark-purple`}>
               {NAV_LINKS.map(({ href, displayText }) => (
@@ -80,8 +103,8 @@ const NavBar = () => {
                     <a
                       className={
                         router.pathname === href
-                          ? `${styles.link} ${styles.active}`
-                          : styles.link
+                          ? `${styles.link} ${styles.animated} ${styles.active}`
+                          : `${styles.link} ${styles.animated}`
                       }
                       href={href}
                     >

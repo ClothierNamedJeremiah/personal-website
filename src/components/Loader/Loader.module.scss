@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.icon {
+  width: 250px;
+  animation: shrink-and-fadeaway 0.4s 3s ease-in-out 1 forwards;
+
+  & > path {
+    color: #f3f3f3;
+    stroke-width: 0.5px;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+  }
+
+  & > path.is-active {
+    animation: icon 3s ease-in-out 1 forwards;
+  }
+}
+
+@keyframes shrink-and-fadeaway {
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes icon {
+  to {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    fill: transparent;
+    stroke-width: 0.5px;
+  }
+  100% {
+    fill: #f3f3f3;
+    stroke-width: 0px;
+  }
+}

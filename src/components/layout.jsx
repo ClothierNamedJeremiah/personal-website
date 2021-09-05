@@ -1,54 +1,45 @@
-import React from 'react';
-import Head from 'next/head';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import anime from 'animejs';
 
 import ContactBar from 'components/ContactBar';
 import SocialBar from 'components/SocialBar';
 import NavBar from 'components/NavBar';
 
-const Layout = ({ children }) => (
-  <>
-    <Head>
-      <title>Jeremiah Clothier</title>
+import styles from 'scss/modules/SideElement.module.scss';
 
-      {/* metadata */}
-      <meta charSet="utf-8" />
-      <meta
-        name="description"
-        content="Jeremiah Clothier's personal website and portfolio"
-      />
-      <meta name="theme-color" content="#F9DC78" />
-      <meta
-        name="keywords"
-        content="Jeremiah Clothier, Software Engineer, Software, Developer, Personal Website"
-      />
-      <meta name="author" content="Jeremiah Clothier" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="Jeremiah Clothier" />
-      <meta
-        property="og:description"
-        content="Jeremiah Clothier's personal website and portfolio"
-      />
-      <meta property="og:site_name" content="Personal Website" />
+// eslint-disable-next-line no-unused-vars
+const Layout = ({ children }) => {
+  useEffect(() => {
+    const timeline = anime.timeline({});
 
-      {/* icons */}
-      <link rel="icon" href="/favicon-32x32.png" />
-      <link rel="shortcut icon" href="/favicon-32x32.png" />
-      <link rel="apple-touch-icon" href="/favicon-32x32.png" />
+    timeline.add({
+      targets: '.layout-wrapper',
+      opacity: 1,
+      translateY: -150,
+      easing: 'cubicBezier(.5, .05, .1, .3)',
+      delay: 1800,
+      duration: 900,
+    });
 
-      {/* CDN Content */}
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-        rel="stylesheet"
-      />
-    </Head>
-    <NavBar />
-    <div className="layout-wrapper">{children}</div>
-    <SocialBar />
-    <ContactBar />
-  </>
-);
+    timeline.add({
+      targets: `.${styles.container}.${styles.animated}`,
+      opacity: 0.8,
+      delay: 800,
+      duration: 800,
+      easing: 'easeInOutQuad',
+    });
+  }, []);
+
+  return (
+    <>
+      <NavBar />
+      <div className="layout-wrapper">{children}</div>
+      <SocialBar />
+      <ContactBar />
+    </>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

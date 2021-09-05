@@ -1,10 +1,10 @@
-@import "../mixins";
+@import '../mixins';
 
 .wrapper {
   display: flex;
   justify-content: center;
-  
-  margin-top: 5vh;
+
+  margin-top: 4vh;
 
   & > .container {
     display: flex;
@@ -23,11 +23,6 @@
       flex-direction: row;
       align-items: initial;
     }
-  }
-
-
-  @media screen and (min-width: 750px) {
-    margin-top: 8vw;
   }
 }
 
@@ -68,16 +63,18 @@
   background-size: contain;
 
   flex-basis: 50vw;
-  
+
   max-width: 375px;
   width: 66.666%;
   height: 70%;
   max-height: 623.34px;
 
-  
   margin: 3em auto;
 
   @media screen and (min-width: 1330px) {
     align-self: flex-end;
+    position: relative;
+    bottom: 100px;
+    right: 50px;
   }
 }
