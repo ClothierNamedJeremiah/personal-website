@@ -1,5 +1,14 @@
 const BLOGS = [
   {
+    title: '8 Flexbox Layouts You Should Know',
+    shortDescription:
+      'Modern CSS layouts commonly used to built UI components.',
+    datePublished: '09-13-2021',
+    estimatedTimeToRead: '10 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/8-flexbox-layouts-you-should-know-d83635e0d47f?sk=66ed418baacc476f34be2988b8515a6c',
+  },
+  {
     title: 'How to easily hide a HTML element',
     shortDescription:
       'There are three easy ways to hide an element using CSS; each of them a little different than the other.',
