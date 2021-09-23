@@ -35,7 +35,7 @@ function renderSegmentSnippet() {
  * import global CSS anywhere else.
  */
 export default function App({ Component, pageProps }) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <>
@@ -75,12 +75,14 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      {/* Inject the Segment snippet into the <head> of the document  */}
-      <Script dangerouslySetInnerHTML={{ __html: renderSegmentSnippet() }} />
       {isLoading ? (
         <Loader onLoadingFinished={() => setIsLoading(false)} />
       ) : (
         <Layout>
+          {/* Inject the Segment snippet into the <head> of the document  */}
+          <Script
+            dangerouslySetInnerHTML={{ __html: renderSegmentSnippet() }}
+          />
           <Component {...pageProps} />
         </Layout>
       )}

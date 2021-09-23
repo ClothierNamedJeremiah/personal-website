@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Router from 'next/router';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 
@@ -7,6 +8,10 @@ import SocialBar from 'components/SocialBar';
 import NavBar from 'components/NavBar';
 
 import styles from 'scss/modules/SideElement.module.scss';
+
+Router.events.on('routeChangeComplete', (url) => {
+  window.analytics.page(url);
+});
 
 // eslint-disable-next-line no-unused-vars
 const Layout = ({ children }) => {
