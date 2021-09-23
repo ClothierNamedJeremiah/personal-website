@@ -4,7 +4,7 @@ const BLOGS = [
     shortDescription:
       'Modern CSS layouts commonly used to built UI components.',
     datePublished: '09-13-2021',
-    estimatedTimeToRead: '10 min read',
+    estimatedTimeToRead: '5 min read',
     blogPostUrl:
       'https://clothiernamedjeremiah.medium.com/8-flexbox-layouts-you-should-know-d83635e0d47f?sk=66ed418baacc476f34be2988b8515a6c',
   },

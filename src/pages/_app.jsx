@@ -1,12 +1,31 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Script from 'next/script';
 import PropTypes from 'prop-types';
+import * as snippet from '@segment/snippet';
 
 import Layout from 'components/layout';
 import Loader from 'components/Loader';
 
 import 'scss/styles.scss';
+
+const DEFAULT_WRITE_KEY = '54xglqHay8p6ZsQ1fcaWVTTE4UZYZsph';
+
+function renderSegmentSnippet() {
+  const opts = {
+    apiKey: process.env.NEXT_PUBLIC_ANALYTICS_WRITE_KEY || DEFAULT_WRITE_KEY,
+    // note: the page option only covers SSR tracking.
+    // Page.js is used to track other events using `window.analytics.page()`
+    page: true,
+  };
+
+  if (process.env.NODE_ENV === 'development') {
+    return snippet.max(opts);
+  }
+
+  return snippet.min(opts);
+}
 
 /**
  * The 'App' component is the top-level component which will be common across all the different
@@ -16,7 +35,7 @@ import 'scss/styles.scss';
  * import global CSS anywhere else.
  */
 export default function App({ Component, pageProps }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <>
@@ -56,6 +75,8 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
+      {/* Inject the Segment snippet into the <head> of the document  */}
+      <Script dangerouslySetInnerHTML={{ __html: renderSegmentSnippet() }} />
       {isLoading ? (
         <Loader onLoadingFinished={() => setIsLoading(false)} />
       ) : (

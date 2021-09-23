@@ -5,9 +5,6 @@ module.exports = {
     loader: 'imgix',
     path: '',
   },
-  future: {
-    webpack5: true,
-  },
   reactStrictMode: true,
   webpack: (config, { dev, isServer }) => {
     if (!isServer && dev) {
