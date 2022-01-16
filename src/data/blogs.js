@@ -2,7 +2,7 @@ const BLOGS = [
   {
     title: 'Polymorphic Components with React & Typescript',
     shortDescription:
-      'Learn how to properly type annotate a Polymorphic Component in Typescript',
+      'Learn what Polymorphic Components are and how to properly type annotate them with Typescript.',
     datePublished: '01-16-2022',
     estimatedTimeToRead: '5 min read',
     blogPostUrl:
