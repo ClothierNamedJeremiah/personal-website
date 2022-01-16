@@ -1,5 +1,14 @@
 const BLOGS = [
   {
+    title: 'Polymorphic Components with React & Typescript',
+    shortDescription:
+      'Learn how to properly type annotate a Polymorphic Component in Typescript',
+    datePublished: '01-16-2022',
+    estimatedTimeToRead: '5 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/polymorphic-components-in-react-typescript-25f70edd2870?sk=176db3ba3444b79b816570d1ebb8e1fe',
+  },
+  {
     title: '8 Flexbox Layouts You Should Know',
     shortDescription:
       'Modern CSS layouts commonly used to built UI components.',

@@ -35,7 +35,12 @@ function renderSegmentSnippet() {
  * import global CSS anywhere else.
  */
 export default function App({ Component, pageProps }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    if (process.env.NODE_ENV !== 'production') {
+      return false;
+    }
+    return true;
+  });
 
   return (
     <>
