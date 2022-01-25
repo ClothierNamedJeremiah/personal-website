@@ -138,6 +138,7 @@ const Skills = () => (
                     layout="fill"
                     objectFit="contain"
                     className={styles[className]}
+                    unoptimized
                   />
                 </div>
               </div>
@@ -166,6 +167,7 @@ const Skills = () => (
                     layout="fill"
                     objectFit="contain"
                     className={styles[className]}
+                    unoptimized
                   />
                 </div>
               </div>

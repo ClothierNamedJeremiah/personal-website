@@ -1,11 +1,12 @@
 .DS_Store
+.eslintcache
 .vscode
 node_modules/
-TODO.md
 
 # Next.js
 out/
 .next/
+tsconfig.tsbuildinfo
 
 # Coverage Reports
 test-coverage/
@@ -13,3 +14,4 @@ test-coverage/
 # Under Developed
 archive/
 src/data/testimonials.js
+TODO.md

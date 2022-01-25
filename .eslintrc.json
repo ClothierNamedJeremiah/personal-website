@@ -26,6 +26,7 @@
   },
   "plugins": ["jest", "react"],
   "rules": {
+    "no-restricted-exports": 0,
     "react/function-component-definition": 0
   },
   "settings": {
