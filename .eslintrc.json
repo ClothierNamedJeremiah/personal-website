@@ -25,7 +25,9 @@
     "sourceType": "module"
   },
   "plugins": ["jest", "react"],
-  "rules": {},
+  "rules": {
+    "react/function-component-definition": 0
+  },
   "settings": {
     "import/resolver": {
       "node": {
