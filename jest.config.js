@@ -1,6 +1,6 @@
 module.exports = {
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{js,jsx}'],
+  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
   coverageDirectory: 'test-coverage',
   coverageReporters: ['lcov'],
   coverageThreshold: {
@@ -12,7 +12,7 @@ module.exports = {
     },
   },
   moduleDirectories: ['node_modules', 'src'],
-  moduleFileExtensions: ['js', 'jsx'],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   /**
    * Jest will ignore files matching our styles sheet, and instead, require our mock files.
    * We are using an ES6 Proxy (identity-obj-proxy) to mock CSS Modules.

@@ -22,7 +22,7 @@ jest.mock('next/router', () => ({
 jest.mock(
   'next/link',
   () =>
-    ({ children }) =>
+    ({ children }: { children: unknown }) =>
       children,
 );
 
@@ -86,10 +86,11 @@ describe('NavBar', () => {
     const navMenu = screen.queryByTestId('navmenu');
     expect(navMenu).toBeInTheDocument();
 
-    const link = getAllByRole(navMenu, 'link')[1];
-
-    userEvent.click(link);
-
-    expect(navMenu).not.toBeInTheDocument();
+    if (navMenu) {
+      const link = getAllByRole(navMenu, 'link')[1];
+      userEvent.click(link);
+      // eslint-disable-next-line jest/no-conditional-expect
+      expect(navMenu).not.toBeInTheDocument();
+    }
   });
 });

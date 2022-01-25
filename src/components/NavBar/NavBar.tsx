@@ -48,7 +48,11 @@ const NavBar = () => {
   useEffect(() => {
     const wasMenuOpened = isMenuOpen;
     const navContainer = document.querySelector(`.${styles.container}`);
+    if (!navContainer) {
+      return;
+    }
 
+    // @ts-expect-error FIXME
     const { scrollHeight, style } = navContainer;
 
     /**
@@ -118,9 +122,7 @@ const NavBar = () => {
 
           <MenuIcon isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
         </nav>
-        {isMenuOpen && (
-          <NavMenu isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
-        )}
+        {isMenuOpen && <NavMenu setMenuOpen={setMenuOpen} />}
       </div>
       {isMenuOpen && <div className={styles.backdrop} />}
     </>

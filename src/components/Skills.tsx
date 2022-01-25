@@ -113,7 +113,7 @@ const lessComfortableSkills = [
   },
 ];
 
-const AWSLoader = ({ src }) =>
+const AWSLoader = ({ src }: { src: string }) =>
   `https://jeremiah-clothier.s3-us-west-2.amazonaws.com${src}`;
 
 const Skills = () => (
@@ -137,7 +137,7 @@ const Skills = () => (
                     alt={alt}
                     layout="fill"
                     objectFit="contain"
-                    className={styles[className]}
+                    className={className ? styles[className] : ''}
                     unoptimized
                   />
                 </div>
@@ -166,7 +166,7 @@ const Skills = () => (
                     alt={alt}
                     layout="fill"
                     objectFit="contain"
-                    className={styles[className]}
+                    className={className ? styles[className] : ''}
                     unoptimized
                   />
                 </div>

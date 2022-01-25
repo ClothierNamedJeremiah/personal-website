@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 import styles from './Loader.module.scss';
 
-const Loader = ({ onLoadingFinished }) => {
+type Props = {
+  onLoadingFinished(): void;
+};
+
+const Loader = ({ onLoadingFinished }: Props) => {
   useEffect(() => {
     const loadingTimeout = setTimeout(() => {
       onLoadingFinished();
@@ -34,10 +37,6 @@ const Loader = ({ onLoadingFinished }) => {
       </svg>
     </div>
   );
-};
-
-Loader.propTypes = {
-  onLoadingFinished: PropTypes.func.isRequired,
 };
 
 export default Loader;

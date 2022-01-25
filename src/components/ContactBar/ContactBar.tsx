@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SideElement from '../shared/SideElement';
+import SideElement from 'components/shared/SideElement';
 
 import styles from './ContactBar.module.scss';
 

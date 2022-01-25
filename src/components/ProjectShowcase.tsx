@@ -1,16 +1,16 @@
+import { ProjectType } from 'data/portfolio';
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import styles from 'scss/modules/ProjectShowcase.module.scss';
 
-const ProjectShowcase = (props) => {
+const ProjectShowcase = (props: ProjectType) => {
   const {
     title,
     description,
-    imageClassName,
     tags,
     sourceCodeUrl,
     liveSiteUrl,
+    previewImageUrl,
   } = props;
 
   return (
@@ -19,7 +19,13 @@ const ProjectShowcase = (props) => {
         <h2 className="fs-normal fc-yellow fw-normal">Project Showcase</h2>
         <h3 className="fw-normal">{title}</h3>
       </header>
-      <div className={`${styles['preview-image']} ${styles[imageClassName]}`} />
+      <div className={styles.preview}>
+        <img
+          className={styles.image}
+          src={previewImageUrl}
+          alt="project preview"
+        />
+      </div>
       <p className={styles.description}>{description}</p>
       <ul className={styles.tags}>
         {tags.map((tag) => (
@@ -36,15 +42,6 @@ const ProjectShowcase = (props) => {
       </div>
     </article>
   );
-};
-
-ProjectShowcase.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  imageClassName: PropTypes.string.isRequired,
-  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  sourceCodeUrl: PropTypes.string.isRequired,
-  liveSiteUrl: PropTypes.string.isRequired,
 };
 
 export default ProjectShowcase;

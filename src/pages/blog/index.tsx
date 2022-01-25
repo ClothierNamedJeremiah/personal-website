@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import getBlogPosts from 'data/blogs';
+import getBlogPosts, { BlogType } from 'data/blogs';
 
 import styles from 'scss/modules/Blog.module.scss';
 
@@ -21,7 +20,11 @@ const months = [
   'December',
 ];
 
-const Blog = (props) => {
+type Props = {
+  blogs: BlogType[];
+};
+
+const Blog = (props: Props) => {
   const { blogs } = props;
 
   return (
@@ -70,18 +73,6 @@ const Blog = (props) => {
       </aside>
     </main>
   );
-};
-
-const BlogCardExactShape = PropTypes.exact({
-  title: PropTypes.string.isRequired,
-  shortDescription: PropTypes.string.isRequired,
-  datePublished: PropTypes.string.isRequired,
-  estimatedTimeToRead: PropTypes.string.isRequired,
-  blogPostUrl: PropTypes.string.isRequired,
-});
-
-Blog.propTypes = {
-  blogs: PropTypes.arrayOf(BlogCardExactShape).isRequired,
 };
 
 export const getStaticProps = async () => ({

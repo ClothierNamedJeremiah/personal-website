@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
-import PropTypes from 'prop-types';
 import * as snippet from '@segment/snippet';
 
 import Layout from 'components/layout';
@@ -27,6 +26,11 @@ function renderSegmentSnippet() {
   return snippet.min(opts);
 }
 
+type Props = {
+  Component: React.ElementType;
+  pageProps: { [key: string]: unknown };
+};
+
 /**
  * The 'App' component is the top-level component which will be common across all the different
  * pages. You can use this 'App' component to keep state when navigating between pages.
@@ -34,7 +38,7 @@ function renderSegmentSnippet() {
  * In Next.js, you can add global CSS files by importing them from 'pages/_app.js'. You cannot
  * import global CSS anywhere else.
  */
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }: Props) {
   const [isLoading, setIsLoading] = useState(() => {
     if (process.env.NODE_ENV !== 'production') {
       return false;
@@ -70,7 +74,6 @@ export default function App({ Component, pageProps }) {
 
         {/* icons */}
         <link rel="icon" href="/favicon-32x32.png" />
-        <link rel="shortcut icon" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" href="/favicon-32x32.png" />
 
         {/* CDN Content */}
@@ -94,8 +97,3 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
-
-App.propTypes = {
-  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]).isRequired,
-  pageProps: PropTypes.objectOf(PropTypes.any).isRequired,
-};

@@ -1,17 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import styles from 'scss/modules/SideElement.module.scss';
 
-const SideElement = ({ children, side }) => (
+type Props = {
+  children: React.ReactNode;
+  side: 'left' | 'right';
+};
+
+const SideElement = ({ children, side }: Props) => (
   <aside className={`${styles.container} ${styles.animated}`} data-side={side}>
     {children}
   </aside>
 );
-
-SideElement.propTypes = {
-  children: PropTypes.node.isRequired,
-  side: PropTypes.oneOf(['left', 'right']).isRequired,
-};
 
 export default SideElement;

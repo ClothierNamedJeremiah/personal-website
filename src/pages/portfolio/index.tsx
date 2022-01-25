@@ -1,13 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import ProjectShowcase from 'components/ProjectShowcase';
-
-import getPortfolioProjects from 'data/portfolio';
-
+import getPortfolioProjects, { ProjectType } from 'data/portfolio';
 import styles from 'scss/pages/Portfolio.module.scss';
 
-const Portfolio = (props) => {
+type Props = {
+  projects: ProjectType[];
+};
+
+const Portfolio = (props: Props) => {
   const { projects } = props;
 
   return (
@@ -19,20 +20,20 @@ const Portfolio = (props) => {
         ({
           title,
           description,
-          imageClassName,
           tags,
           sourceCodeUrl,
           liveSiteUrl,
+          previewImageUrl,
         }) => (
           <React.Fragment key={title}>
             <ProjectShowcase
               key={title}
               title={title}
               description={description}
-              imageClassName={imageClassName}
               tags={tags}
               sourceCodeUrl={sourceCodeUrl}
               liveSiteUrl={liveSiteUrl}
+              previewImageUrl={previewImageUrl}
             />
             <span className={styles.separator} />
           </React.Fragment>
@@ -40,19 +41,6 @@ const Portfolio = (props) => {
       )}
     </div>
   );
-};
-
-const Project = PropTypes.exact({
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  imageClassName: PropTypes.string.isRequired,
-  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  sourceCodeUrl: PropTypes.string.isRequired,
-  liveSiteUrl: PropTypes.string.isRequired,
-});
-
-Portfolio.propTypes = {
-  projects: PropTypes.arrayOf(Project).isRequired,
 };
 
 export const getStaticProps = async () => ({

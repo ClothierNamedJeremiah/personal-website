@@ -1,4 +1,12 @@
-const BLOGS = [
+export type BlogType = {
+  title: string;
+  shortDescription: string;
+  datePublished: string;
+  estimatedTimeToRead: string;
+  blogPostUrl: string;
+};
+
+const BLOGS: BlogType[] = [
   {
     title: 'Polymorphic Components with React & Typescript',
     shortDescription:

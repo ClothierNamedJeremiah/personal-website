@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
 
 import styles from '../scss/modules/NavMenu.module.scss';
 
@@ -9,17 +8,23 @@ const NAV_LINKS = {
   home: '/',
   blog: '/blog',
   portfolio: '/portfolio',
+} as const;
+
+type Props = {
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-function NavMenu(props) {
+function NavMenu(props: Props) {
   const { setMenuOpen } = props;
   const router = useRouter();
+
+  const linkKeys = Object.keys(NAV_LINKS) as Array<keyof typeof NAV_LINKS>;
 
   return (
     <div className={styles.container} data-testid="navmenu">
       <div className={styles.separator} />
       <ul className={`${styles.links} fc-dark-purple`}>
-        {Object.keys(NAV_LINKS).map((key) => (
+        {linkKeys.map((key) => (
           <li key={key} className={`${styles['link-wrapper']}`}>
             <Link href={NAV_LINKS[key]}>
               <a
@@ -40,9 +45,5 @@ function NavMenu(props) {
     </div>
   );
 }
-
-NavMenu.propTypes = {
-  setMenuOpen: PropTypes.func.isRequired,
-};
 
 export default NavMenu;

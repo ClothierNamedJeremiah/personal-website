@@ -1,10 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const MenuIcon = (props) => {
+type Props = {
+  isMenuOpen: boolean;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const MenuIcon = (props: Props) => {
   const { isMenuOpen, setMenuOpen } = props;
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter') {
       setMenuOpen((prevState) => !prevState);
     }
@@ -25,11 +29,6 @@ const MenuIcon = (props) => {
       </div>
     </div>
   );
-};
-
-MenuIcon.propTypes = {
-  isMenuOpen: PropTypes.bool.isRequired,
-  setMenuOpen: PropTypes.func.isRequired,
 };
 
 export default MenuIcon;

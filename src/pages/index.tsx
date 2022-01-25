@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Welcome from '../components/Welcome';
-import Skills from '../components/Skills';
+import Welcome from 'components/Welcome';
+import Skills from 'components/Skills';
 
 import styles from '../scss/pages/Home.module.scss';
 

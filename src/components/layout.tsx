@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Router from 'next/router';
-import PropTypes from 'prop-types';
 import anime from 'animejs';
 
 import ContactBar from 'components/ContactBar';
@@ -13,8 +12,11 @@ Router.events.on('routeChangeComplete', (url) => {
   window.analytics.page(url);
 });
 
-// eslint-disable-next-line no-unused-vars
-const Layout = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const Layout = ({ children }: Props) => {
   useEffect(() => {
     const timeline = anime.timeline({});
 
@@ -44,10 +46,6 @@ const Layout = ({ children }) => {
       <ContactBar />
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;
