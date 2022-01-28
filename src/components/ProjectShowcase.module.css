@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header {
+  align-self: flex-start;
+}
+
+.header > h2 {
+  margin-bottom: 0.25em;
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.description {
+  background-color: var(--light-purple);
+  padding: 16px;
+  border-radius: 4px;
+  line-height: 1.42em;
+
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  position: relative;
+  height: auto;
+  max-width: 100%;
+
+  background-color: var(--dark-purple);
+  border: solid 2px var(--light-purple);
+  border-radius: 4px;
+}
+
+.image::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.4s ease;
+}
+
+.image:hover::after {
+  background-color: transparent;
+}
+
+.tags {
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0.8;
+  margin-bottom: 1em;
+  gap: 0.5em;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 1em;
+  padding: 1em;
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    margin: 5em 0;
+    height: 420px;
+  }
+
+  .container:nth-of-type(odd) :is(.header, .description, .links, .tags) {
+    align-self: flex-end;
+  }
+
+  .container:nth-of-type(even) :is(.header, .description, .links, .tags) {
+    align-self: flex-start;
+  }
+
+  .container:nth-of-type(odd) :is(.header .description) {
+    text-align: right;
+  }
+
+  .container:nth-of-type(even) :is(.header .description) {
+    text-align: left;
+  }
+
+  .container:nth-of-type(odd) .tags {
+    justify-content: end;
+  }
+
+  .container:nth-of-type(even) .tags {
+    justify-content: start;
+  }
+
+  .container:nth-of-type(odd) .preview {
+    left: 0;
+  }
+
+  .container:nth-of-type(even) .preview {
+    right: 0;
+  }
+
+  .header {
+    margin-top: 2em;
+  }
+
+  .header > h3 {
+    margin-bottom: 0.25em;
+  }
+
+  .preview {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    height: auto;
+
+    width: calc(50% - 1em);
+    max-width: initial;
+  }
+
+  .description {
+    max-width: initial;
+    width: calc(50% - 1em);
+  }
+
+  .tags {
+    width: calc(50% - 1em);
+  }
+}

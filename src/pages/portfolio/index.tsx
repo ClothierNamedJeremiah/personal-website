@@ -2,7 +2,7 @@ import React from 'react';
 
 import ProjectShowcase from 'components/ProjectShowcase';
 import getPortfolioProjects, { ProjectType } from 'data/portfolio';
-import styles from 'scss/pages/Portfolio.module.scss';
+import styles from './Portfolio.module.css';
 
 type Props = {
   projects: ProjectType[];

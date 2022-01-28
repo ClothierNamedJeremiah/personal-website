@@ -15,6 +15,7 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:jest/recommended",
+    "plugin:storybook/recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "prettier"

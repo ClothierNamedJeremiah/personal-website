@@ -4,10 +4,10 @@ import Head from 'next/head';
 import Script from 'next/script';
 import * as snippet from '@segment/snippet';
 
-import Layout from 'components/layout';
+import Layout from 'components/Layout';
 import Loader from 'components/Loader';
 
-import 'scss/styles.scss';
+import '../index.css';
 
 const DEFAULT_WRITE_KEY = '54xglqHay8p6ZsQ1fcaWVTTE4UZYZsph';
 
@@ -41,7 +41,7 @@ type Props = {
 export default function App({ Component, pageProps }: Props) {
   const [isLoading, setIsLoading] = useState(() => {
     if (process.env.NODE_ENV !== 'production') {
-      return false;
+      return true;
     }
     return true;
   });

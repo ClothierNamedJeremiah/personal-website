@@ -1,0 +1,20 @@
+.wrapper {
+  margin: var(--height-nav-small) 5% 0 5%;
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  bottom: -150px;
+  opacity: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .wrapper {
+    margin: var(--height-nav) 75px 0 75px;
+  }
+}
+
+.wrapper > *:first-child {
+  flex-basis: 1240px;
+  max-width: 1240px;
+}

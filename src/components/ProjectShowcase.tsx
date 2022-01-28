@@ -1,7 +1,8 @@
 import { ProjectType } from 'data/portfolio';
 import React from 'react';
 
-import styles from 'scss/modules/ProjectShowcase.module.scss';
+import Button from 'components/Button';
+import styles from './ProjectShowcase.module.css';
 
 const ProjectShowcase = (props: ProjectType) => {
   const {
@@ -33,12 +34,8 @@ const ProjectShowcase = (props: ProjectType) => {
         ))}
       </ul>
       <div className={styles.links}>
-        <a className="btn-link-base btn-link-primary" href={sourceCodeUrl}>
-          Source Code
-        </a>
-        <a className="btn-link-base btn-link-primary" href={liveSiteUrl}>
-          Live Website
-        </a>
+        <Button href={sourceCodeUrl} text="Source Code" />
+        <Button href={liveSiteUrl} text="Live Website" />
       </div>
     </article>
   );

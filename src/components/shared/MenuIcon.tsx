@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './MenuIcon.module.css';
 
 type Props = {
   isMenuOpen: boolean;
@@ -15,17 +16,17 @@ const MenuIcon = (props: Props) => {
   };
 
   return (
-    <div className="menu-wrapper">
+    <div className={styles.wrapper}>
       <div
-        className={isMenuOpen ? 'menu-icon active' : 'menu-icon'}
+        className={isMenuOpen ? `${styles.icon} ${styles.active}` : styles.icon}
         onClick={() => setMenuOpen((prevState) => !prevState)}
         onKeyDown={handleKeyDown}
         role="button"
         tabIndex={-1}
       >
-        <div className="line" />
-        <div className="line" />
-        <div className="line" />
+        <div className={styles.line} />
+        <div className={styles.line} />
+        <div className={styles.line} />
       </div>
     </div>
   );

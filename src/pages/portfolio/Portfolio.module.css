@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title::after {
+  content: '';
+
+  display: inline-block;
+  height: 2px;
+  flex-grow: 1;
+  margin-left: 0.5em;
+  background-color: var(--yellow);
+}
+
+.separator {
+  display: inline-flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  margin: 10em 0;
+}
+
+.separator::after {
+  --angle: 0.191986; /* 11 deg (in radians) */
+  --cos-term1: 1;
+  --cos-term2: calc((var(--angle) * var(--angle)) / 2);
+  --cos-term3: calc(
+    (var(--angle) * var(--angle) * var(--angle) * var(--angle)) / 24
+  );
+  --cos-term4: calc(
+    (
+        var(--angle) * var(--angle) * var(--angle) * var(--angle) * var(--angle) *
+          var(--angle)
+      ) / 720
+  );
+  --cos-term5: calc(
+    (
+        var(--angle) * var(--angle) * var(--angle) * var(--angle) * var(--angle) *
+          var(--angle) * var(--angle) * var(--angle)
+      ) / 40320
+  );
+  --cos: calc(
+    var(--cos-term1) - var(--cos-term2) + var(--cos-term3) - var(--cos-term4) +
+      var(--cos-term5)
+  );
+
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: calc(100vw / var(--cos));
+
+  background-color: var(--yellow);
+  transform: rotate(11deg);
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    margin-top: 2em;
+  }
+}

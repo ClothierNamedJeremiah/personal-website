@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import styles from './Loader.module.scss';
+import styles from './Loader.module.css';
 
 type Props = {
   onLoadingFinished(): void;

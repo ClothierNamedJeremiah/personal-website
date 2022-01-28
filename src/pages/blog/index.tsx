@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import getBlogPosts, { BlogType } from 'data/blogs';
 
-import styles from 'scss/modules/Blog.module.scss';
+import styles from './Blog.module.css';
 
 const months = [
   'January',
@@ -29,10 +29,10 @@ const Blog = (props: Props) => {
 
   return (
     <main className={styles.container}>
-      <h1 className={`${styles.title} fs-large fc-yellow`}>
+      <h1 className={`${styles.pageTitle} fs-large fc-yellow`}>
         Blogs I&apos;ve Written
       </h1>
-      <article className={styles['blogs-container']}>
+      <article className={styles.blogsContainer}>
         {blogs.map(
           ({
             title,
@@ -49,9 +49,14 @@ const Blog = (props: Props) => {
             return (
               <article key={title} className={styles.article}>
                 <header className={styles.header}>
-                  <h3 className={`fc-yellow fs-normal ${styles.title}`}>
+                  <h3 className={`fc-yellow fs-normal ${styles.blogTitle}`}>
                     <Link href={blogPostUrl}>
-                      <a target="_blank" rel="noreferrer" href={blogPostUrl}>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={blogPostUrl}
+                        className={styles.link}
+                      >
                         {title}
                       </a>
                     </Link>
@@ -68,7 +73,7 @@ const Blog = (props: Props) => {
           },
         )}
       </article>
-      <aside className={styles['more-coming-soon']}>
+      <aside className={styles.moreComingSoon}>
         <small>More coming soon...</small>
       </aside>
     </main>

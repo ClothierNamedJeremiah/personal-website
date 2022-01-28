@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import styles from 'scss/modules/Skills.module.scss';
+import styles from './Skills.module.css';
 
 const comfortableSkills = [
   {

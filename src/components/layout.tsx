@@ -6,7 +6,9 @@ import ContactBar from 'components/ContactBar';
 import SocialBar from 'components/SocialBar';
 import NavBar from 'components/NavBar';
 
-import styles from 'scss/modules/SideElement.module.scss';
+// eslint-disable-next-line import/no-named-default
+import { default as sideElementStyles } from 'components/shared/SideElement.module.css';
+import styles from './Layout.module.css';
 
 Router.events.on('routeChangeComplete', (url) => {
   window.analytics.page(url);
@@ -21,7 +23,7 @@ const Layout = ({ children }: Props) => {
     const timeline = anime.timeline({});
 
     timeline.add({
-      targets: '.layout-wrapper',
+      targets: `.${styles.wrapper}`,
       opacity: 1,
       translateY: -150,
       easing: 'cubicBezier(.5, .05, .1, .3)',
@@ -30,7 +32,7 @@ const Layout = ({ children }: Props) => {
     });
 
     timeline.add({
-      targets: `.${styles.container}.${styles.animated}`,
+      targets: `.${sideElementStyles.container}.${sideElementStyles.animated}`,
       opacity: 0.8,
       delay: 800,
       duration: 800,
@@ -41,7 +43,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <NavBar />
-      <div className="layout-wrapper">{children}</div>
+      <div className={styles.wrapper}>{children}</div>
       <SocialBar />
       <ContactBar />
     </>

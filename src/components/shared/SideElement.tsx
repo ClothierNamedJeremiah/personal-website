@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from 'scss/modules/SideElement.module.scss';
+import styles from './SideElement.module.css';
 
 type Props = {
   children: React.ReactNode;

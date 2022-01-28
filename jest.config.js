@@ -1,4 +1,12 @@
-module.exports = {
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+  dir: './',
+});
+
+const customJestConfig = {
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
   coverageDirectory: 'test-coverage',
@@ -13,14 +21,13 @@ module.exports = {
   },
   moduleDirectories: ['node_modules', 'src'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  /**
-   * Jest will ignore files matching our styles sheet, and instead, require our mock files.
-   * We are using an ES6 Proxy (identity-obj-proxy) to mock CSS Modules.
-   */
   moduleNameMapper: {
-    '\\.(css|less|scss)$': 'identity-obj-proxy',
+    // Handle module aliases (this will be automatically configured for you soon)
+    '^@/components/(.*)$': '<rootDir>/components/$1',
+
+    '^@/pages/(.*)$': '<rootDir>/pages/$1',
   },
-  setupFilesAfterEnv: ['./jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/.next/',
@@ -29,3 +36,6 @@ module.exports = {
     '/out/',
   ],
 };
+
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+module.exports = createJestConfig(customJestConfig);

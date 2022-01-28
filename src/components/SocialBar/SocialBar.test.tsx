@@ -16,7 +16,7 @@ describe('SocialBar', () => {
       'href',
       'https://github.com/ClothierNamedJeremiah',
     );
-    expect(link).not.toHaveTextContent('');
+    expect(link).toBeInTheDocument();
   });
 
   test('LinkedIn link is displayed', () => {
@@ -28,7 +28,7 @@ describe('SocialBar', () => {
       'href',
       'https://www.linkedin.com/in/jeremiah-clothier/',
     );
-    expect(link).not.toHaveTextContent('');
+    expect(link).toBeInTheDocument();
   });
 
   test('Medium link is displayed', () => {
@@ -39,6 +39,6 @@ describe('SocialBar', () => {
       'href',
       'https://clothiernamedjeremiah.medium.com/',
     );
-    expect(link).not.toHaveTextContent('');
+    expect(link).toBeInTheDocument();
   });
 });

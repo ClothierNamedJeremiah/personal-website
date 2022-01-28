@@ -6,7 +6,7 @@ import anime from 'animejs';
 import MenuIcon from 'components/shared/MenuIcon';
 import NavMenu from 'components/NavMenu';
 
-import styles from './NavBar.module.scss';
+import styles from './NavBar.module.css';
 
 export const NAV_LINKS = [
   {
@@ -39,7 +39,7 @@ const NavBar = () => {
     });
 
     loader.add({
-      targets: ['.mi-logo', '.menu-wrapper', `.${styles.links} > li`],
+      targets: [`.${styles.logo}`, `.${styles.links} > li`],
       translateY: 80,
       delay: anime.stagger(100, { start: 300 }),
     });
@@ -98,7 +98,9 @@ const NavBar = () => {
     <>
       <div className={`${styles.container} ${styles.animated}`}>
         <nav className={styles.nav}>
-          <span className={`mi-logo mi-logo-light ${styles.animated}`} />
+          <span
+            className={`${styles.logo} ${styles.logoLight} ${styles.animated}`}
+          />
           {!isMenuOpen && (
             <ul className={`${styles.links} fc-dark-purple`}>
               {NAV_LINKS.map(({ href, displayText }) => (

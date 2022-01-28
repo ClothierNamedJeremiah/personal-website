@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  grid-auto-rows: minmax(calc(100vh - var(--height-nav-small)), auto);
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    grid-auto-rows: minmax(calc(100vh - var(--height-nav)), auto);
+  }
+}

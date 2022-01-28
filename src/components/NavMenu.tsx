@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import styles from '../scss/modules/NavMenu.module.scss';
+import styles from './NavMenu.module.css';
 
 const NAV_LINKS = {
   home: '/',

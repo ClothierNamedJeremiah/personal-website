@@ -1,8 +1,7 @@
 import React from 'react';
 
 import SideElement from 'components/shared/SideElement';
-
-import styles from './ContactBar.module.scss';
+import styles from './ContactBar.module.css';
 
 const ContactBar = () => (
   <SideElement side="right">

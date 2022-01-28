@@ -1,0 +1,36 @@
+.btnBase {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 148px;
+
+  font-weight: 400;
+  color: var(--yellow);
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.btnBase:hover,
+.btnBase:focus {
+  text-decoration: none;
+}
+
+.btnPrimary {
+  border: 2px solid var(--yellow);
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btnPrimary:hover {
+  background-color: rgba(249, 220, 120, 0.2);
+  color: var(--yellow-golden);
+  border-color: var(--yellow-golden);
+}
+
+.btnPrimary:active {
+  outline-width: 2px;
+  outline-color: var(--light-purple);
+  outline-style: auto;
+}

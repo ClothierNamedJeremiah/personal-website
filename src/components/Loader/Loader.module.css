@@ -11,17 +11,17 @@
 .icon {
   width: 250px;
   animation: shrink-and-fadeaway 0.4s 3s ease-in-out 1 forwards;
+}
 
-  & > path {
-    color: #f3f3f3;
-    stroke-width: 0.5px;
-    stroke-dashoffset: 1000;
-    stroke-dasharray: 1000;
-  }
+.icon > path {
+  color: #f3f3f3;
+  stroke-width: 0.5px;
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000;
+}
 
-  & > path.is-active {
-    animation: icon 3s ease-in-out 1 forwards;
-  }
+.icon > path.is-active {
+  animation: icon 3s ease-in-out 1 forwards;
 }
 
 @keyframes shrink-and-fadeaway {
