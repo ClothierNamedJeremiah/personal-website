@@ -1,0 +1,28 @@
+name: Renovate
+
+# Controls when the workflow will run
+on:
+  schedule:
+    # The "*" (#42, asterisk) character has special semantics in YAML, so this
+    # string has to be quoted.
+    - cron: '0/15 * * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "rennovate"
+  renovate:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.0.2
+
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v32.52.1
+        with:
+          token: ${{ secrets.RENOVATE_TOKEN }}
