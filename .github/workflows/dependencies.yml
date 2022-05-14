@@ -5,7 +5,7 @@ on:
   schedule:
     # The "*" (#42, asterisk) character has special semantics in YAML, so this
     # string has to be quoted.
-    - cron: '0/15 * * * *'
+    - cron: '0 6 * * MON-FRI'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
