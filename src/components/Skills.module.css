@@ -1,17 +1,8 @@
-.wrapper {
-  display: flex;
-  align-items: center;
-}
-
 .description {
+  @apply relative mx-auto my-4 text-center;
+
   max-width: 750px;
-  margin: -0 auto 2em auto;
-
-  position: relative;
-  top: -1em;
-
-  text-align: center;
-  line-height: 1.48em;
+  /* margin: 0 auto 2em auto; */
 }
 
 .title {
@@ -31,24 +22,12 @@
   background-color: var(--yellow);
 }
 
-.skills-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2em;
-
-  list-style-type: none;
-  margin-block: 0;
-  margin-inline: 0;
-  padding-inline: 0;
-}
-
-.skills-list > li {
+.skillListItem {
   flex-basis: 100px;
 }
 
 @media screen and (min-width: 750px) {
-  .skills-list > li {
+  .skillListItem {
     flex-basis: 125px;
   }
 }
@@ -60,10 +39,11 @@
 
   height: 100px;
   width: 100px;
-  background-color: var(--frost-white);
-  background-color: var(--light-purple);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
+  margin: 0 auto;
+
+  @apply bg-purple-300;
 }
 
 @media screen and (min-width: 750px) {
@@ -80,11 +60,6 @@
   margin: 1.75em;
 }
 
-.skill-description {
-  text-align: center;
-}
-
-.jquery,
 .selenium {
   filter: brightness(0);
   border-radius: 4px;
@@ -105,6 +80,6 @@
   display: inline-block;
   background-color: var(--yellow);
   height: 2px;
-  width: 65%;
-  margin: 3em 0 4em 0;
+  width: 50%;
+  margin: 1rem 0;
 }

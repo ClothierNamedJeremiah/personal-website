@@ -1,22 +1,11 @@
-.wrapper {
-  display: flex;
-  justify-content: center;
-
-  margin-top: 4vh;
-}
-
-@media screen and (min-width: 750px) {
-  .wrapper {
-    margin-top: 8vw;
-  }
-}
-
 .container {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  max-width: 1240px;
-  flex-grow: 1;
+  height: calc(100vh - var(--height-nav));
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-top: 8vh;
+  }
 }
 
 @media screen and (min-width: 1330px) {
@@ -27,35 +16,6 @@
 
   .container > div {
     flex-grow: 1;
-  }
-}
-
-.title,
-.subtitle {
-  margin-bottom: 0;
-}
-
-.subtitle {
-  opacity: 0.6;
-}
-
-.bio {
-  max-width: 600px;
-  line-height: 1.24;
-  margin-bottom: 2em;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  gap: 1em;
-}
-
-@media screen and (min-width: 400px) {
-  .links {
-    justify-content: flex-start;
   }
 }
 

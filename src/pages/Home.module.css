@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: grid;
   grid-auto-rows: minmax(calc(100vh - var(--height-nav-small)), auto);
 }
@@ -7,4 +7,4 @@
   .container {
     grid-auto-rows: minmax(calc(100vh - var(--height-nav)), auto);
   }
-}
+} */

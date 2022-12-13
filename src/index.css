@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --dark-purple: #303c6c;
   --light-purple: #8da6ff;
@@ -6,55 +10,22 @@
   --frost-white: #f6f9fc;
   --white: #ffffff;
 
-  --height-nav: 80px;
-  --height-nav-small: 60px;
+  --height-nav: 96px;
+  --height-nav-small: 76px;
 }
 
-/* Copied from _reset.scss TOOD: deprecate styles */
-html,
-body {
-  box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
-  overscroll-behavior-y: none;
-  -webkit-overflow-scrolling: auto;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+@layer utilities {
+  .focus-indicator {
+    @apply rounded-md;
+    @apply focus-visible:outline-none;
+    @apply focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-[#303c6c];
+  }
 }
 
 body {
-  margin: 0;
-
-  font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
   color: var(--frost-white);
   background-color: var(--dark-purple);
-}
-
-h1,
-h2,
-h3 {
-  margin-top: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 /* Copied from colors */
@@ -82,14 +53,9 @@ menu {
 }
 
 .fc-yellow {
-  color: var(--yellow);
+  @apply text-yellow-300;
 }
 
 .fc-frost-white {
-  color: var(--rost-white);
-}
-
-/* Font Weight */
-.fw-normal {
-  font-weight: normal;
+  color: var(--frost-white);
 }

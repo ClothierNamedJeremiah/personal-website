@@ -1,7 +1,7 @@
 import { ProjectType } from 'data/portfolio';
 import React from 'react';
 
-import Button from 'components/Button';
+import Link from 'components/Link';
 import styles from './ProjectShowcase.module.css';
 
 const ProjectShowcase = (props: ProjectType) => {
@@ -17,8 +17,8 @@ const ProjectShowcase = (props: ProjectType) => {
   return (
     <article className={styles.container}>
       <header className={styles.header}>
-        <h2 className="fs-normal fc-yellow fw-normal">Project Showcase</h2>
-        <h3 className="fw-normal">{title}</h3>
+        <h2 className="fs-normal fc-yellow font-normal">Project Showcase</h2>
+        <h3 className="font-normal">{title}</h3>
       </header>
       <div className={styles.preview}>
         <img
@@ -34,8 +34,8 @@ const ProjectShowcase = (props: ProjectType) => {
         ))}
       </ul>
       <div className={styles.links}>
-        <Button href={sourceCodeUrl} text="Source Code" />
-        <Button href={liveSiteUrl} text="Live Website" />
+        <Link href={sourceCodeUrl}>Source Code</Link>
+        <Link href={liveSiteUrl}>Live Website</Link>
       </div>
     </article>
   );

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 import * as snippet from '@segment/snippet';
@@ -39,12 +39,18 @@ type Props = {
  * import global CSS anywhere else.
  */
 export default function App({ Component, pageProps }: Props) {
+  const isMounted = useRef(false);
+
   const [isLoading, setIsLoading] = useState(() => {
     if (process.env.NODE_ENV !== 'production') {
-      return true;
+      return false;
     }
     return true;
   });
+
+  useEffect(() => {
+    isMounted.current = true;
+  }, []);
 
   return (
     <>
@@ -88,9 +94,11 @@ export default function App({ Component, pageProps }: Props) {
       ) : (
         <Layout>
           {/* Inject the Segment snippet into the <head> of the document  */}
-          <Script
-            dangerouslySetInnerHTML={{ __html: renderSegmentSnippet() }}
-          />
+          {!isMounted.current && (
+            <Script
+              dangerouslySetInnerHTML={{ __html: renderSegmentSnippet() }}
+            />
+          )}
           <Component {...pageProps} />
         </Layout>
       )}

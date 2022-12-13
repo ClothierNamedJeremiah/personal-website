@@ -1,9 +1,8 @@
+import clsx from 'clsx';
 import React from 'react';
 import Link from 'next/link';
 
 import getBlogPosts, { BlogType } from 'data/blogs';
-
-import styles from './Blog.module.css';
 
 const months = [
   'January',
@@ -28,55 +27,66 @@ const Blog = (props: Props) => {
   const { blogs } = props;
 
   return (
-    <main className={styles.container}>
-      <h1 className={`${styles.pageTitle} fs-large fc-yellow`}>
+    <div className="my-8 mx-4 flex flex-col items-center">
+      <h1
+        className={clsx(
+          'flex w-full items-center justify-between text-yellow-300',
+          "after:inline-block after:h-0.5 after:flex-grow after:content-['']",
+          'after:ml-2 after:bg-yellow-300',
+          'fs-large',
+        )}
+      >
         Blogs I&apos;ve Written
       </h1>
-      <article className={styles.blogsContainer}>
+      <article className="my-4">
         {blogs.map(
-          ({
-            title,
-            shortDescription,
-            datePublished,
-            estimatedTimeToRead,
-            blogPostUrl,
-          }) => {
+          (
+            {
+              title,
+              shortDescription,
+              datePublished,
+              estimatedTimeToRead,
+              blogPostUrl,
+            },
+            index,
+          ) => {
             const date = new Date(datePublished);
             const monthName = months[date.getMonth()];
 
             const formattedDateString = `${monthName} ${date.getDate()}, ${date.getFullYear()}`;
 
             return (
-              <article key={title} className={styles.article}>
-                <header className={styles.header}>
-                  <h3 className={`fc-yellow fs-normal ${styles.blogTitle}`}>
-                    <Link href={blogPostUrl}>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href={blogPostUrl}
-                        className={styles.link}
-                      >
-                        {title}
-                      </a>
+              <article
+                key={title}
+                className={clsx(index > 0 && 'mt-12', 'max-w-screen-sm')}
+              >
+                <header>
+                  <h2 className="fs-normal text-yellow-300">
+                    <Link
+                      target="_blank"
+                      rel="noreferrer"
+                      href={blogPostUrl}
+                      className="transition-colors hover:text-yellow-500"
+                    >
+                      {title}
                     </Link>
-                  </h3>
+                  </h2>
                   <small>
                     <time dateTime={datePublished}>{formattedDateString}</time>
                     &nbsp;• ☕️ &nbsp;
                     <span>{estimatedTimeToRead}</span>
                   </small>
                 </header>
-                <p className={styles.description}>{shortDescription}</p>
+                <p>{shortDescription}</p>
               </article>
             );
           },
         )}
       </article>
-      <aside className={styles.moreComingSoon}>
+      <aside className="text-center font-bold tracking-widest text-gray-300">
         <small>More coming soon...</small>
       </aside>
-    </main>
+    </div>
   );
 };
 

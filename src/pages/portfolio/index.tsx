@@ -12,7 +12,7 @@ const Portfolio = (props: Props) => {
   const { projects } = props;
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} m-4`}>
       <h1 className={`${styles.title} fs-large fc-yellow`}>
         Some Things I&apos;ve Built
       </h1>

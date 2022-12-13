@@ -14,7 +14,7 @@ import {
 import Portfolio, { getStaticProps } from 'pages/portfolio';
 
 describe('Portfolio', () => {
-  test('renders all projects', async () => {
+  it('renders all projects', async () => {
     const { props } = await getStaticProps();
     const { projects } = props;
     render(<Portfolio projects={projects} />);

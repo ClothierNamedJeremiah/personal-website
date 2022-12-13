@@ -8,6 +8,70 @@ export type BlogType = {
 
 const BLOGS: BlogType[] = [
   {
+    title:
+      'Use the newest libraries and automatically update your dependencies',
+    shortDescription:
+      'Whether it’s a personal project or your companies’ code base, updating dependencies and keeping versions up-to-date can be tedious. Save yourself, your team, and other developers time by automating the whole process!',
+    datePublished: '05-15-2022',
+    estimatedTimeToRead: '7 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/use-the-newest-libraries-and-update-your-dependencies-automatically-a7dac272ed44',
+  },
+  {
+    title: 'TypeScript Tip 02: Three Different Ways to Annotate Event Handlers',
+    shortDescription:
+      "When it comes to annotating event handlers, you have several different options. I'll explore three different approaches you can use.",
+    datePublished: '04-30-2022',
+    estimatedTimeToRead: '5 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/typescript-tip-02-three-different-ways-to-annotate-event-handlers-226a72fb412c',
+  },
+  {
+    title:
+      'Typescript Tip 01: Using the “in” Keyword to Deal with Multiple Types',
+    shortDescription:
+      'Today we’re talking about Type Narrowing — special checks and assignments that allow typescript to infer more specific types than declared — and how you can use the in keyword to distinguish between several types.',
+    datePublished: '04-14-2022',
+    estimatedTimeToRead: '5 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/typescript-tip-using-the-in-keyword-to-deal-with-multiple-types-a47aa3557610',
+  },
+  {
+    title: 'Learn CSS Selectors While Preparing Bento Boxes',
+    shortDescription:
+      'Hands-on learning is a form of education in which students learn by doing. Specifically, hands-on learning allows students to learn through experiencing something and can give them an opportunity to immerse themselves in a learning environment, while putting their acquired skills to use and building new skills.',
+    datePublished: '03-14-2022',
+    estimatedTimeToRead: '5 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/learn-css-selectors-while-preparing-bento-boxes-1cb57350b8a2',
+  },
+  {
+    title: 'Practical Pair Programming',
+    shortDescription:
+      'Two heads are generally better than one. Collaboration leads to more thoughtful designs for users. Fewer errors and bugs reach production. And you often end up with a better implementation that more than 1 person understands. If pair programming has so many potential benefits, why don’t we see more developers taking advantage of it?',
+    datePublished: '02-28-2022',
+    estimatedTimeToRead: '5 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/practical-pair-programming-4982a2aa757b',
+  },
+  {
+    title: 'CSS Concepts to Know: Specificity',
+    shortDescription: 'Everything you need to know about Specificity in CSS',
+    datePublished: '02-14-2022',
+    estimatedTimeToRead: '4 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/css-concepts-to-know-specificity-d97ec638d398',
+  },
+  {
+    title: "Using React's Context API to Simplify Components",
+    shortDescription:
+      "In this article I'll demonstrate rendering a list of items (<Radio />) and how we can useContext() to simplify the props we are required to pass to a <Radio /> component.",
+    datePublished: '01-31-2022',
+    estimatedTimeToRead: '4 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/using-reacts-context-api-to-simply-components-84d4cf72112a',
+  },
+  {
     title: 'Polymorphic Components with React & Typescript',
     shortDescription:
       'Learn what Polymorphic Components are and how to properly type annotate them with Typescript.',

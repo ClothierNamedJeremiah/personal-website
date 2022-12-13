@@ -1,13 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import Router from 'next/router';
-import anime from 'animejs';
+// import anime from 'animejs';
 
-import ContactBar from 'components/ContactBar';
-import SocialBar from 'components/SocialBar';
-import NavBar from 'components/NavBar';
+import ContactBar from 'components/footer/ContactBar';
+import SocialLinksFooter from 'components/footer/SocialLinksFooter';
+import NavBar from 'components/nav/NavBar';
+import SkipLink from 'components/SkipLink';
 
-// eslint-disable-next-line import/no-named-default
-import { default as sideElementStyles } from 'components/shared/SideElement.module.css';
 import styles from './Layout.module.css';
 
 Router.events.on('routeChangeComplete', (url) => {
@@ -20,33 +20,36 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   useEffect(() => {
-    const timeline = anime.timeline({});
-
-    timeline.add({
-      targets: `.${styles.wrapper}`,
-      opacity: 1,
-      translateY: -150,
-      easing: 'cubicBezier(.5, .05, .1, .3)',
-      delay: 1800,
-      duration: 900,
-    });
-
-    timeline.add({
-      targets: `.${sideElementStyles.container}.${sideElementStyles.animated}`,
-      opacity: 0.8,
-      delay: 800,
-      duration: 800,
-      easing: 'easeInOutQuad',
-    });
+    // const timeline = anime.timeline({});
+    // timeline.add({
+    //   targets: `.${styles.wrapper}`,
+    //   opacity: 1,
+    //   translateY: -150,
+    //   easing: 'cubicBezier(.5, .05, .1, .3)',
+    //   delay: 1800,
+    //   duration: 900,
+    // });
+    // FIXME: this is broken
+    // timeline.add({
+    //   targets: `.${sideElementStyles.animated}`,
+    //   opacity: 0.8,
+    //   delay: 800,
+    //   duration: 800,
+    //   easing: 'easeInOutQuad',
+    // });
   }, []);
 
+  // TODO: accomplish the same positioning with `display: grid`
   return (
-    <>
+    <div className={styles.container}>
+      <SkipLink />
       <NavBar />
-      <div className={styles.wrapper}>{children}</div>
-      <SocialBar />
+      <main id="main-content" className="scroll-m-20 overflow-auto">
+        <div className="mx-auto max-w-[1240px]">{children}</div>
+      </main>
+      <SocialLinksFooter />
       <ContactBar />
-    </>
+    </div>
   );
 };
 

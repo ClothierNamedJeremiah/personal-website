@@ -8,7 +8,7 @@ import { render, screen } from '@testing-library/react';
 import Blog, { getStaticProps } from 'pages/blog';
 
 describe('Blog', () => {
-  test('renders all blogs', async () => {
+  it('renders all blogs', async () => {
     const { props } = await getStaticProps();
     const { blogs } = props;
     render(<Blog blogs={blogs} />);

@@ -5,6 +5,16 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     'storybook-addon-next-router',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        styleLoaderOptions: {},
+        cssLoaderOptions: {},
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   core: {
     builder: 'webpack5',
@@ -16,7 +26,7 @@ module.exports = {
   //   reactDocgenTypescriptOptions: {
   //     shouldExtractLiteralValuesFromEnum: true,
   //     propFilter: (prop) =>
-  //       prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+  //       prop.parent ? !/node_modules/.it(prop.parent.fileName) : true,
   //   },
   // },
   framework: '@storybook/react',

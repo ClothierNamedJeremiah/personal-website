@@ -1,9 +1,9 @@
 const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    loader: 'imgix',
-    path: '',
+    unoptimized: true,
   },
   reactStrictMode: true,
   webpack: (config, { dev, isServer }) => {
@@ -26,3 +26,5 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = nextConfig;
