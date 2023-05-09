@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-// import anime from 'animejs';
 
 import MenuIcon from 'components/nav/NavMenu/MenuIcon';
 import NavMenu from 'components/nav/NavMenu';
@@ -26,22 +25,6 @@ export const NAV_LINKS = [
 const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
-
-  const animate = () => {
-    // const loader = anime.timeline({});
-    // loader.add({
-    //   targets: `.${styles.container}.${styles.animated}`,
-    //   translateY: 80,
-    //   delay: 100,
-    //   duration: 400,
-    //   easing: 'easeInOutQuad',
-    // });
-    // loader.add({
-    //   targets: [`.${styles.logo}`, `.${styles.links} > li`],
-    //   translateY: 80,
-    //   delay: anime.stagger(100, { start: 300 }),
-    // });
-  };
 
   useEffect(() => {
     const wasMenuOpened = isMenuOpen;
@@ -87,10 +70,6 @@ const NavBar = () => {
       });
     }
   }, [isMenuOpen]);
-
-  useEffect(() => {
-    animate();
-  }, []);
 
   return (
     <>
