@@ -9,7 +9,7 @@ out/
 tsconfig.tsbuildinfo
 
 # Coverage Reports
-test-coverage/
+coverage/
 
 # Under Developed
 src/data/testimonials.js

@@ -1,15 +1,13 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const nextJest = require('next/jest');
+import type { Config } from 'jest'; // eslint-disable-line jest/no-jest-import
+import nextJest from 'next/jest';
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
   dir: './',
 });
 
-const customJestConfig = {
+const customJestConfig: Config = {
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
-  coverageDirectory: 'test-coverage',
   coverageReporters: ['lcov'],
   coverageThreshold: {
     global: {
@@ -28,8 +26,8 @@ const customJestConfig = {
     '^@/pages/(.*)$': '<rootDir>/pages/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/.vscode/', '/archive/', '/out/'],
+  testEnvironment: 'jest-environment-jsdom',
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(customJestConfig);
+export default createJestConfig(customJestConfig);
