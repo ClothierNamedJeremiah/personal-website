@@ -114,7 +114,7 @@ const Skills = () => (
           exciting technologies. Here is a list of technologies which I use on a day-to-day basis.
         </p>
         <ul className="my-12 flex flex-wrap justify-center gap-8">
-          {COMFORTABLE_SKILL_ICONS.map(({ component: Icon, labelText }) => (
+          {COMFORTABLE_SKILL_ICONS.map(({ component: Icon, labelText }, index) => (
             <li className="basis-[100px]" key={labelText}>
               <div
                 className={clsx(
@@ -122,9 +122,9 @@ const Skills = () => (
                   'rounded-full bg-purple-300 drop-shadow-md',
                 )}
               >
-                <Icon aria-labelledby="id-1" />
+                <Icon aria-labelledby={`id-${index}`} />
               </div>
-              <p className="mt-2 text-center" id="id-1">
+              <p className="mt-2 text-center" id={`id-${index}`}>
                 {labelText}
               </p>
             </li>
@@ -138,7 +138,7 @@ const Skills = () => (
                     loader={AWSLoader}
                     src={`/images/skills/${src}`}
                     alt={alt}
-                    layout="fill"
+                    fill
                     objectFit="contain"
                     className={className ? styles[className] : undefined}
                     unoptimized
@@ -166,7 +166,7 @@ const Skills = () => (
                     loader={AWSLoader}
                     src={`/images/skills/${src}`}
                     alt={alt}
-                    layout="fill"
+                    fill
                     objectFit="contain"
                     className={className ? styles[className] : ''}
                     unoptimized
