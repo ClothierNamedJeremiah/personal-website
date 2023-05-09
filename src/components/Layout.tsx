@@ -21,7 +21,7 @@ const Layout = ({ children }: Props) => (
   <div className={styles.container}>
     <SkipLink />
     <NavBar />
-    <main id="main-content" className="scroll-m-20 overflow-auto">
+    <main id="main-content" className="scroll-m-20">
       <div className="mx-auto max-w-[1240px]">{children}</div>
     </main>
     <SocialLinksFooter />
