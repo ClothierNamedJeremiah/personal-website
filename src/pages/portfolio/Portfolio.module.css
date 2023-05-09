@@ -33,24 +33,18 @@
   --angle: 0.191986; /* 11 deg (in radians) */
   --cos-term1: 1;
   --cos-term2: calc((var(--angle) * var(--angle)) / 2);
-  --cos-term3: calc(
-    (var(--angle) * var(--angle) * var(--angle) * var(--angle)) / 24
-  );
+  --cos-term3: calc((var(--angle) * var(--angle) * var(--angle) * var(--angle)) / 24);
   --cos-term4: calc(
-    (
-        var(--angle) * var(--angle) * var(--angle) * var(--angle) * var(--angle) *
-          var(--angle)
-      ) / 720
+    (var(--angle) * var(--angle) * var(--angle) * var(--angle) * var(--angle) * var(--angle)) / 720
   );
   --cos-term5: calc(
     (
-        var(--angle) * var(--angle) * var(--angle) * var(--angle) * var(--angle) *
-          var(--angle) * var(--angle) * var(--angle)
+        var(--angle) * var(--angle) * var(--angle) * var(--angle) * var(--angle) * var(--angle) *
+          var(--angle) * var(--angle)
       ) / 40320
   );
   --cos: calc(
-    var(--cos-term1) - var(--cos-term2) + var(--cos-term3) - var(--cos-term4) +
-      var(--cos-term5)
+    var(--cos-term1) - var(--cos-term2) + var(--cos-term3) - var(--cos-term4) + var(--cos-term5)
   );
 
   position: absolute;

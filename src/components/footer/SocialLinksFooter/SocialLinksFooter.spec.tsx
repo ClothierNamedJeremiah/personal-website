@@ -2,7 +2,6 @@
  * @jest-environment jsdom
  */
 
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import SocialLinksFooter from './SocialLinksFooter';
 
@@ -12,10 +11,7 @@ describe('SocialLinksFooter', () => {
 
     const link = screen.getAllByRole('link')[0];
 
-    expect(link).toHaveAttribute(
-      'href',
-      'https://github.com/ClothierNamedJeremiah',
-    );
+    expect(link).toHaveAttribute('href', 'https://github.com/ClothierNamedJeremiah');
     expect(link).toBeInTheDocument();
   });
 
@@ -24,10 +20,7 @@ describe('SocialLinksFooter', () => {
 
     const link = screen.getAllByRole('link')[1];
 
-    expect(link).toHaveAttribute(
-      'href',
-      'https://www.linkedin.com/in/jeremiah-clothier/',
-    );
+    expect(link).toHaveAttribute('href', 'https://www.linkedin.com/in/jeremiah-clothier/');
     expect(link).toBeInTheDocument();
   });
 
@@ -35,10 +28,7 @@ describe('SocialLinksFooter', () => {
     render(<SocialLinksFooter />);
     const link = screen.getAllByRole('link')[2];
 
-    expect(link).toHaveAttribute(
-      'href',
-      'https://clothiernamedjeremiah.medium.com/',
-    );
+    expect(link).toHaveAttribute('href', 'https://clothiernamedjeremiah.medium.com/');
     expect(link).toBeInTheDocument();
   });
 });

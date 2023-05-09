@@ -28,13 +28,7 @@ const customJestConfig = {
     '^@/pages/(.*)$': '<rootDir>/pages/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/.next/',
-    '/.vscode/',
-    '/archive/',
-    '/out/',
-  ],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/.vscode/', '/archive/', '/out/'],
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

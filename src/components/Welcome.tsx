@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Link from 'components/Link';
 import styles from './Welcome.module.css';
 
@@ -12,16 +10,11 @@ const Welcome = () => (
         I build things on the web for fun.
       </p>
       <p className="fs-normal fc-light-purple mt-4 mb-8 max-w-[600px] leading-7">
-        I am a software engineer with a constant desire to figure out why and
-        how things work the way they do. I enjoy building websites and teaching
-        others along the way.
+        I am a software engineer with a constant desire to figure out why and how things work the
+        way they do. I enjoy building websites and teaching others along the way.
       </p>
       <div className="flex flex-wrap justify-center gap-4 sm:justify-start">
-        <Link
-          href="mailto:clothiernamedjeremiah@gmail.com"
-          rel="noreferrer"
-          target="_blank"
-        >
+        <Link href="mailto:clothiernamedjeremiah@gmail.com" rel="noreferrer" target="_blank">
           Get in Touch
         </Link>
         <Link

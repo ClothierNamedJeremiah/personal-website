@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import React from 'react';
 import Link from 'next/link';
 
 import getBlogPosts, { BlogType } from 'data/blogs';
@@ -40,26 +39,14 @@ const Blog = (props: Props) => {
       </h1>
       <article className="my-4">
         {blogs.map(
-          (
-            {
-              title,
-              shortDescription,
-              datePublished,
-              estimatedTimeToRead,
-              blogPostUrl,
-            },
-            index,
-          ) => {
+          ({ title, shortDescription, datePublished, estimatedTimeToRead, blogPostUrl }, index) => {
             const date = new Date(datePublished);
             const monthName = months[date.getMonth()];
 
             const formattedDateString = `${monthName} ${date.getDate()}, ${date.getFullYear()}`;
 
             return (
-              <article
-                key={title}
-                className={clsx(index > 0 && 'mt-12', 'max-w-screen-sm')}
-              >
+              <article key={title} className={clsx(index > 0 && 'mt-12', 'max-w-screen-sm')}>
                 <header>
                   <h2 className="fs-normal text-yellow-300">
                     <Link

@@ -9,8 +9,7 @@ type Args = ComponentProps<typeof SkipLink>;
 export default {
   title: 'SkipLink',
   component: SkipLink,
-  description:
-    'Skip link used for accessible navigation and skips the main nav',
+  description: 'Skip link used for accessible navigation and skips the main nav',
 } as Meta<Args>;
 
 export const Default: StoryObj<Args> = {

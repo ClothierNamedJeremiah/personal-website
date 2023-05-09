@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 
 import SideFooter from 'components/footer/SideFooter';

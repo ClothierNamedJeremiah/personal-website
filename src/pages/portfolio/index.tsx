@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 
 import ProjectShowcase from 'components/ProjectShowcase';
 import getPortfolioProjects, { ProjectType } from 'data/portfolio';
@@ -13,32 +13,21 @@ const Portfolio = (props: Props) => {
 
   return (
     <div className={`${styles.container} m-4`}>
-      <h1 className={`${styles.title} fs-large fc-yellow`}>
-        Some Things I&apos;ve Built
-      </h1>
-      {projects.map(
-        ({
-          title,
-          description,
-          tags,
-          sourceCodeUrl,
-          liveSiteUrl,
-          previewImageUrl,
-        }) => (
-          <React.Fragment key={title}>
-            <ProjectShowcase
-              key={title}
-              title={title}
-              description={description}
-              tags={tags}
-              sourceCodeUrl={sourceCodeUrl}
-              liveSiteUrl={liveSiteUrl}
-              previewImageUrl={previewImageUrl}
-            />
-            <span className={styles.separator} />
-          </React.Fragment>
-        ),
-      )}
+      <h1 className={`${styles.title} fs-large fc-yellow`}>Some Things I&apos;ve Built</h1>
+      {projects.map(({ title, description, tags, sourceCodeUrl, liveSiteUrl, previewImageUrl }) => (
+        <Fragment key={title}>
+          <ProjectShowcase
+            key={title}
+            title={title}
+            description={description}
+            tags={tags}
+            sourceCodeUrl={sourceCodeUrl}
+            liveSiteUrl={liveSiteUrl}
+            previewImageUrl={previewImageUrl}
+          />
+          <span className={styles.separator} />
+        </Fragment>
+      ))}
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import React from 'react';
 import Image from 'next/image';
 
 import styles from './Skills.module.css';
@@ -111,9 +110,8 @@ const Skills = () => (
       <h2 className={`fs-large fc-yellow ${styles.title}`}>Technologies</h2>
       <article>
         <p className={styles.description}>
-          As a full-stack software engineer I get the opportunity to work with a
-          bunch of new and exciting technologies. Here is a list of technologies
-          which I use on a day-to-day basis.
+          As a full-stack software engineer I get the opportunity to work with a bunch of new and
+          exciting technologies. Here is a list of technologies which I use on a day-to-day basis.
         </p>
         <ul className="my-12 flex flex-wrap justify-center gap-8">
           {COMFORTABLE_SKILL_ICONS.map(({ component: Icon, labelText }) => (
@@ -155,10 +153,9 @@ const Skills = () => (
       <span className={styles.separator} />
       <article>
         <p className={styles.description}>
-          Learning about new technologies and having the opportunity to use so
-          many different technologies is one of my favorite things about being a
-          software engineer. Here are some other technologies I enjoy using, but
-          do not use on a day-to-day basis.
+          Learning about new technologies and having the opportunity to use so many different
+          technologies is one of my favorite things about being a software engineer. Here are some
+          other technologies I enjoy using, but do not use on a day-to-day basis.
         </p>
         <ul className="my-12 flex flex-wrap justify-center gap-8">
           {lessComfortableSkills.map(({ src, alt, description, className }) => (

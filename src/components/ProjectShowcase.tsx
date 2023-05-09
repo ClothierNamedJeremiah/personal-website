@@ -1,18 +1,10 @@
 import { ProjectType } from 'data/portfolio';
-import React from 'react';
 
 import Link from 'components/Link';
 import styles from './ProjectShowcase.module.css';
 
 const ProjectShowcase = (props: ProjectType) => {
-  const {
-    title,
-    description,
-    tags,
-    sourceCodeUrl,
-    liveSiteUrl,
-    previewImageUrl,
-  } = props;
+  const { title, description, tags, sourceCodeUrl, liveSiteUrl, previewImageUrl } = props;
 
   return (
     <article className={styles.container}>
@@ -21,11 +13,7 @@ const ProjectShowcase = (props: ProjectType) => {
         <h3 className="font-normal">{title}</h3>
       </header>
       <div className={styles.preview}>
-        <img
-          className={styles.image}
-          src={previewImageUrl}
-          alt="project preview"
-        />
+        <img className={styles.image} src={previewImageUrl} alt="project preview" />
       </div>
       <p className={styles.description}>{description}</p>
       <ul className={styles.tags}>

@@ -1,11 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
-const CustomLink = ({
-  children,
-  ...otherProps
-}: React.ComponentProps<typeof Link>) => (
+const CustomLink = ({ children, ...otherProps }: React.ComponentProps<typeof Link>) => (
   <Link
     className={clsx(
       'inline-block px-4 py-3 text-yellow-400 transition-colors',

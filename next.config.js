@@ -11,14 +11,7 @@ const nextConfig = {
       config.plugins.push(
         new ESLintWebpackPlugin({
           extensions: ['.ts', '.tsx'],
-          exclude: [
-            '.vscode/',
-            '.next/',
-            'archive/',
-            'node_modules/',
-            'out/',
-            'public/',
-          ],
+          exclude: ['.vscode/', '.next/', 'archive/', 'node_modules/', 'out/', 'public/'],
         }),
       );
     }

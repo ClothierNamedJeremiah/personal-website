@@ -1,5 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+import * as React from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 import * as snippet from '@segment/snippet';
@@ -60,10 +62,7 @@ export default function App({ Component, pageProps }: Props) {
         {/* metadata */}
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta charSet="utf-8" />
-        <meta
-          name="description"
-          content="Jeremiah Clothier's personal website and portfolio"
-        />
+        <meta name="description" content="Jeremiah Clothier's personal website and portfolio" />
         <meta name="theme-color" content="#F9DC78" />
         <meta
           name="keywords"
@@ -81,13 +80,6 @@ export default function App({ Component, pageProps }: Props) {
         {/* icons */}
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" href="/favicon-32x32.png" />
-
-        {/* CDN Content */}
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       {isLoading ? (
         <Loader onLoadingFinished={() => setIsLoading(false)} />
@@ -96,6 +88,7 @@ export default function App({ Component, pageProps }: Props) {
           {/* Inject the Segment snippet into the <head> of the document  */}
           {!isMounted.current && (
             <Script
+              id="segment-snippet"
               dangerouslySetInnerHTML={{ __html: renderSegmentSnippet() }}
             />
           )}

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -29,9 +29,7 @@ function NavMenu(props: Props) {
             <Link
               href={NAV_LINKS[key]}
               className={
-                router.pathname === NAV_LINKS[key]
-                  ? `${styles.link} ${styles.active}`
-                  : styles.link
+                router.pathname === NAV_LINKS[key] ? `${styles.link} ${styles.active}` : styles.link
               }
               onClick={() => setMenuOpen(false)}
             >

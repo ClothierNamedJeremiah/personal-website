@@ -2,7 +2,6 @@
  * @jest-environment jsdom
  */
 
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ContactBar from './ContactBar';
 
@@ -15,8 +14,6 @@ describe('ContactBar', () => {
       'mailto:clothiernamedjeremiah@gmail.com',
     );
 
-    expect(screen.getByRole('link')).toHaveTextContent(
-      'clothiernamedjeremiah@gmail.com',
-    );
+    expect(screen.getByRole('link')).toHaveTextContent('clothiernamedjeremiah@gmail.com');
   });
 });

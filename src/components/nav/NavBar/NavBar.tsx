@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 // import anime from 'animejs';
@@ -96,9 +96,7 @@ const NavBar = () => {
     <>
       <div className={`${styles.container} ${styles.animated}`}>
         <nav className="flex h-full flex-wrap items-center justify-between px-4 py-2">
-          <span
-            className={`${styles.logo} ${styles.logoLight} ${styles.animated}`}
-          />
+          <span className={`${styles.logo} ${styles.logoLight} ${styles.animated}`} />
           {!isMenuOpen && (
             <ul className={`${styles.links} fc-dark-purple`}>
               {NAV_LINKS.map(({ href, displayText }) => (

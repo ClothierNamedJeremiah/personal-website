@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function MediumIcon({ className }: { className: string }) {
   return (
     <svg
