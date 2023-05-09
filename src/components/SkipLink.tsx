@@ -21,8 +21,8 @@ import clsx from 'clsx';
 const SkipLink = () => (
   <a
     className={clsx(
-      'focus-indicator absolute top-4 left-4 p-2 opacity-0',
-      'transition-transform duration-500 focus:translate-y-20 focus:opacity-100',
+      'focus-indicator absolute top-4 left-4 z-10 bg-white p-2 text-black opacity-0',
+      'transition-transform duration-500 focus:translate-y-28 focus:opacity-100',
     )}
     href="#main-content"
   >

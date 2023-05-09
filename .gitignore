@@ -12,6 +12,5 @@ tsconfig.tsbuildinfo
 test-coverage/
 
 # Under Developed
-archive/
 src/data/testimonials.js
 TODO.md
