@@ -23,7 +23,7 @@ const ProjectShowcase = (props: ProjectType) => {
       </ul>
       <div className={styles.links}>
         <Link href={sourceCodeUrl}>Source Code</Link>
-        <Link href={liveSiteUrl}>Live Website</Link>
+        {liveSiteUrl && <Link href={liveSiteUrl}>Live Website</Link>}
       </div>
     </article>
   );
