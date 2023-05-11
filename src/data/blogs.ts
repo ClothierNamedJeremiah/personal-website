@@ -10,7 +10,7 @@ const BLOGS: BlogType[] = [
   {
     title: 'Reflecting on a failed goal in 2022',
     shortDescription:
-      "I set an amibitious goal in 2022... and it didn't work out so well. But I reflected on it, learned from it, and set some new goals for the upcoming year which were more exciting and enjoyable",
+      "I set an amibitious goal in 2022... and it didn't work out so well. But I reflected on it, learned from it, and set some new goals for the upcoming year which were more exciting and enjoyable.",
     datePublished: '12-24-2022',
     estimatedTimeToRead: '3 min read',
     blogPostUrl:
@@ -19,7 +19,7 @@ const BLOGS: BlogType[] = [
   {
     title: 'Save over $1,000 on your groceries with 1 line of code',
     shortDescription:
-      "Shopping at Safeway and want to save money? This blog has everything you need to know and talks about how I automated the coupon clipping process on Safeway's website to savve money on groceries",
+      "Do you shop at Safeway and want to save money on groceries? This blog has everything you need to know and describes how I automated the coupon clipping process on Safeway's website to save money while shopping.",
     datePublished: '06-15-2022',
     estimatedTimeToRead: '3 min read',
     blogPostUrl:
