@@ -8,6 +8,24 @@ export type BlogType = {
 
 const BLOGS: BlogType[] = [
   {
+    title: 'Reflecting on a failed goal in 2022',
+    shortDescription:
+      "I set an amibitious goal in 2022... and it didn't work out so well. But I reflected on it, learned from it, and set some new goals for the upcoming year which were more exciting and enjoyable",
+    datePublished: '12-24-2022',
+    estimatedTimeToRead: '3 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/reflecting-on-a-failed-goal-in-2022-f6e5129e850d',
+  },
+  {
+    title: 'Save over $1,000 on your groceries with 1 line of code',
+    shortDescription:
+      "Shopping at Safeway and want to save money? This blog has everything you need to know and talks about how I automated the coupon clipping process on Safeway's website to savve money on groceries",
+    datePublished: '06-15-2022',
+    estimatedTimeToRead: '3 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/saving-over-1-000-on-groceries-with-1-line-of-code-25d6cf15e389',
+  },
+  {
     title: 'Use the newest libraries and automatically update your dependencies',
     shortDescription:
       'Whether it’s a personal project or your companies’ code base, updating dependencies and keeping versions up-to-date can be tedious. Save yourself, your team, and other developers time by automating the whole process!',
