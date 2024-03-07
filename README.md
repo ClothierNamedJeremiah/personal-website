@@ -3,5 +3,3 @@
 Checkout [my personal website](https://jeremiah-clothier.netlify.app/). My personal website is where I experiment with new technology and blog about things I have recently learned.
 
 Built with: TypeScript, CSS Modules, React, Next.js, Material UI and Figma
-
-<!-- https://github.com/vercel/next.js/blob/canary/examples/with-segment-analytics/pages/_app.js -->

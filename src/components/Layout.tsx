@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Router from 'next/router';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import ContactBar from 'components/footer/ContactBar';
 import SocialLinksFooter from 'components/footer/SocialLinksFooter';
@@ -7,10 +7,6 @@ import NavBar from 'components/nav/NavBar';
 import SkipLink from 'components/SkipLink';
 
 import styles from './Layout.module.css';
-
-Router.events.on('routeChangeComplete', (url) => {
-  window.analytics.page(url);
-});
 
 type Props = {
   children: React.ReactNode;
@@ -26,6 +22,7 @@ const Layout = ({ children }: Props) => (
     </main>
     <SocialLinksFooter />
     <ContactBar />
+    <GoogleAnalytics gaId="G-WSMZE1XVKY" />
   </div>
 );
 
