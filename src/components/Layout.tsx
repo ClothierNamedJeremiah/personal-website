@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 
 import ContactBar from 'components/footer/ContactBar';
 import SocialLinksFooter from 'components/footer/SocialLinksFooter';
@@ -23,6 +23,7 @@ const Layout = ({ children }: Props) => (
     <SocialLinksFooter />
     <ContactBar />
     <GoogleAnalytics gaId="G-WSMZE1XVKY" />
+    <GoogleTagManager gtmId="GTM-NMFT8F6J" />
   </div>
 );
 
