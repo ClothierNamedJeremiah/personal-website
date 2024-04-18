@@ -13,6 +13,7 @@ const ProjectShowcase = (props: ProjectType) => {
         <h3 className="font-normal">{title}</h3>
       </header>
       <div className={styles.preview}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className={styles.image} src={previewImageUrl} alt="project preview" />
       </div>
       <p className={styles.description}>{description}</p>

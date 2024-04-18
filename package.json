@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Jeremiah Clothier's personal website",
   "scripts": {
-    "build": "next build && next export",
+    "build": "next build",
     "clean": "rm -rf ./out/ ./.next/ ./node_modules/.cache/ ./coverage/ ./.eslintcache ./tsconfig.tsbuildinfo",
     "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./ && prettier --check .",
     "start": "next start",

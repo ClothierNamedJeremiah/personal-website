@@ -2,10 +2,8 @@ const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    unoptimized: true,
-  },
   reactStrictMode: true,
+  output: 'export',
   webpack: (config, { dev, isServer }) => {
     if (!isServer && dev) {
       config.plugins.push(
