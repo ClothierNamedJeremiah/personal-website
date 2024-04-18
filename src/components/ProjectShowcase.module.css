@@ -25,6 +25,7 @@
 }
 
 .description {
+  /* FIXME(a11y): color contrast bug */
   background-color: var(--light-purple);
   padding: 16px;
   border-radius: 4px;

@@ -74,7 +74,10 @@ const NavBar = () => {
   return (
     <>
       <div className={`${styles.container} ${styles.animated}`}>
-        <nav className="flex h-full flex-wrap items-center justify-between px-4 py-2">
+        <nav
+          className="flex h-full flex-wrap items-center justify-between px-4 py-2"
+          aria-label="Main"
+        >
           <span className={`${styles.logo} ${styles.logoLight} ${styles.animated}`} />
           {!isMenuOpen && (
             <ul className={`${styles.links} fc-dark-purple`}>
@@ -87,6 +90,7 @@ const NavBar = () => {
                         ? `${styles.link} ${styles.animated} ${styles.active}`
                         : `${styles.link} ${styles.animated}`
                     }
+                    aria-current={router.pathname === href ? 'page' : undefined}
                   >
                     {displayText}
                   </Link>
