@@ -33,6 +33,10 @@ body {
   background-color: var(--dark-purple);
 }
 
+#__next {
+  @apply h-full;
+}
+
 /* Copied from colors */
 .fs-x-large {
   font-size: clamp(40px, 8vw, 80px);
