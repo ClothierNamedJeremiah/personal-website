@@ -32,7 +32,7 @@
 }
 
 .link:hover {
-  color: #1c4fff;
+  color: #1c4fff; /* FIXME: color */
   background-color: var(--light-purple);
 }
 

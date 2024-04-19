@@ -16,7 +16,7 @@
   display: inline-block;
   height: 2px;
   flex-grow: 1;
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
   background-color: var(--yellow);
 }
 
