@@ -10,8 +10,13 @@
   --frost-white: #f6f9fc;
   --white: #ffffff;
 
-  --height-nav: 96px;
-  --height-nav-small: 76px;
+  --height-nav: 76px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --height-nav: 96px;
+  }
 }
 
 @layer utilities {
@@ -26,6 +31,10 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--frost-white);
   background-color: var(--dark-purple);
+}
+
+#__next {
+  @apply h-full;
 }
 
 /* Copied from colors */

@@ -25,6 +25,8 @@ jest.mock(
       children,
 );
 
+// FIXME: enable or remove these tests
+// eslint-disable-next-line jest/no-disabled-tests
 describe.skip('NavBar', () => {
   it('renders all top level navigation links', () => {
     render(<NavBar />);

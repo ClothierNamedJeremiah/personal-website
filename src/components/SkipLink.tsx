@@ -14,13 +14,11 @@ import clsx from 'clsx';
  * there are not multiple navigation sections on the page.
  *
  * source: https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G1
- *
- * @returns
  */
 const SkipLink = () => (
   <a
     className={clsx(
-      'focus-indicator absolute top-4 left-4 z-10 bg-white p-2 text-black opacity-0',
+      'focus-indicator absolute left-4 top-4 z-10 bg-white p-2 text-black opacity-0',
       'transition-transform duration-500 focus:translate-y-28 focus:opacity-100',
     )}
     href="#main-content"

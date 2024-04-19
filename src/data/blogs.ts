@@ -8,6 +8,15 @@ export type BlogType = {
 
 const BLOGS: BlogType[] = [
   {
+    title: 'Deep Dive: Frontend Performance Issues Across Our Web Apps',
+    shortDescription:
+      "A journey of Remix the full-stack web framework, a problem we faced and how we solved it using Remix's flexible solutions & native Fetch API",
+    datePublished: '05-17-2023',
+    estimatedTimeToRead: '5 min read',
+    blogPostUrl:
+      'https://medium.com/czi-technology/how-we-significantly-improved-frontend-performance-in-our-remix-app-16f845f3b297',
+  },
+  {
     title: 'Reflecting on a failed goal in 2022',
     shortDescription:
       "I set an amibitious goal in 2022... and it didn't work out so well. But I reflected on it, learned from it, and set some new goals for the upcoming year which were more exciting and enjoyable.",
