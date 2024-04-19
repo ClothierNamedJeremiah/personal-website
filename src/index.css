@@ -10,8 +10,13 @@
   --frost-white: #f6f9fc;
   --white: #ffffff;
 
-  --height-nav: 96px;
-  --height-nav-small: 76px;
+  --height-nav: 76px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --height-nav: 96px;
+  }
 }
 
 @layer utilities {

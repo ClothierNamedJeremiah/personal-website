@@ -23,6 +23,7 @@ const MenuIcon = (props: Props) => {
         onKeyDown={handleKeyDown}
         role="button"
         tabIndex={-1}
+        title={isMenuOpen ? 'collapse navigation menu' : 'expand navigation menu'}
       >
         <div className={styles.line} />
         <div className={styles.line} />

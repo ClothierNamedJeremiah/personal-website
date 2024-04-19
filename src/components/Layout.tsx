@@ -6,19 +6,12 @@ import SocialLinksFooter from 'components/footer/SocialLinksFooter';
 import NavBar from 'components/nav/NavBar';
 import SkipLink from 'components/SkipLink';
 
-import styles from './Layout.module.css';
-
-type Props = {
-  children: React.ReactNode;
-};
-
-// FIXME: can be accomplished with grid layout
-const Layout = ({ children }: Props) => (
-  <div className={styles.container}>
+const Layout = ({ children }: React.PropsWithChildren) => (
+  <div className="grid grid-rows-[var(--height-nav),_1fr]">
     <SkipLink />
     <NavBar />
-    <main id="main-content" className="scroll-m-20">
-      <div className="mx-auto max-w-[1240px]">{children}</div>
+    <main id="main-content">
+      <div className="m-4 max-w-[1240px]">{children}</div>
     </main>
     <SocialLinksFooter />
     <ContactBar />

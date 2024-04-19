@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -26,85 +26,35 @@ const NavBar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    const wasMenuOpened = isMenuOpen;
-    const navContainer = document.querySelector(`.${styles.container}`);
-    if (!navContainer) {
-      return;
-    }
-
-    // @ts-expect-error FIXME
-    const { scrollHeight, style } = navContainer;
-
-    /**
-     * If the menu was opened, set the container height to be scrollHeight. Afterwards,
-     * set the height to auto (in case the window is resized).
-     *
-     * If the menu was closed:
-     * 1) turn the height transition off
-     * 2) Change the container height from 'auto' -> scrollHeight
-     * 3) Change the container height from scrollHeight -> nav.clientHeight
-     */
-    if (wasMenuOpened) {
-      style.height = `${scrollHeight}px`;
-      navContainer.addEventListener(
-        'transitionend',
-        () => {
-          style.height = 'auto';
-        },
-        { once: true },
-      );
-    } else {
-      const temp = style.transition;
-      style.transition = '';
-
-      requestAnimationFrame(() => {
-        style.height = `${scrollHeight}px`;
-        style.transition = temp;
-
-        // As soon as the previous style changes have taken effect, have the element transition
-        // to height: 0, so we are not transitioning out of height: 'auto'
-        requestAnimationFrame(() => {
-          style.height = null;
-        });
-      });
-    }
-  }, [isMenuOpen]);
-
   return (
-    <>
-      <div className={`${styles.container} ${styles.animated}`}>
-        <nav
-          className="flex h-full flex-wrap items-center justify-between px-4 py-2"
-          aria-label="Main"
-        >
-          <span className={`${styles.logo} ${styles.logoLight} ${styles.animated}`} />
-          {!isMenuOpen && (
-            <ul className={`${styles.links} fc-dark-purple`}>
-              {NAV_LINKS.map(({ href, displayText }) => (
-                <li key={displayText}>
-                  <Link
-                    href={href}
-                    className={
-                      router.pathname === href
-                        ? `${styles.link} ${styles.animated} ${styles.active}`
-                        : `${styles.link} ${styles.animated}`
-                    }
-                    aria-current={router.pathname === href ? 'page' : undefined}
-                  >
-                    {displayText}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-
+    <div>
+      {isMenuOpen && (<div className="inset-0 fixed bg-black bg-opacity-90 z-10" />)}
+      <nav className="flex flex-wrap items-center bg-[var(--frost-white)] px-4 py-2 z-10 relative" aria-label="Main">
+        <span className={`${styles.logo} ${styles.logoLight} flex-1`} />
+        <div className="flex-1 max-[480px]:hidden">
+          <ul className="fc-dark-purple justify-end flex list-none gap-2 text-xl tracking-wide">
+            {NAV_LINKS.map(({ href, displayText }) => (
+              <li key={displayText}>
+                <Link
+                  href={href}
+                  className={
+                    router.pathname === href ? `${styles.link} ${styles.active}` : `${styles.link}`
+                  }
+                  aria-current={router.pathname === href ? 'page' : undefined}
+                >
+                  {displayText}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div className="min-[481px]:hidden flex-1 flex justify-end ml-auto">
           <MenuIcon isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
-          {isMenuOpen && <NavMenu setMenuOpen={setMenuOpen} />}
-        </nav>
-      </div>
-      {isMenuOpen && <div className={styles.backdrop} />}
-    </>
+        </div>
+        <NavMenu setMenuOpen={setMenuOpen} open={isMenuOpen} />
+      </nav>
+    </div>
   );
 };
 

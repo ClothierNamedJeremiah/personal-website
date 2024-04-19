@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useRef } from 'react';
 
 import styles from './NavMenu.module.css';
 
@@ -12,17 +13,24 @@ const NAV_LINKS = {
 
 type Props = {
   setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  open: boolean;
 };
 
 function NavMenu(props: Props) {
-  const { setMenuOpen } = props;
+  const { setMenuOpen, open } = props;
   const router = useRouter();
 
   const linkKeys = Object.keys(NAV_LINKS) as Array<keyof typeof NAV_LINKS>;
 
+  const ref = useRef<HTMLDivElement>(null);
+
   return (
-    <div className={styles.container} data-testid="navmenu">
-      <div className={styles.separator} />
+    <div
+      className="min-[481px]:hidden flex-shrink-0 basis-full overflow-y-hidden transition-all"
+      data-testid="navmenu"
+      ref={ref}
+      style={open ? { height: ref.current?.scrollHeight } : { height: '0px' }}
+    >
       <ul className={`${styles.links} fc-dark-purple`}>
         {linkKeys.map((key) => (
           <li key={key} className={`${styles['link-wrapper']}`}>
