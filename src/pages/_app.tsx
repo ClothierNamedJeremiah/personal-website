@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }: Props) {
         />
         <meta name="author" content="Jeremiah Clothier" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Jeremiah Clothier" />
+        <meta property="og:title" content="Jeremiah Clothier" key="title" />
         <meta
           property="og:description"
           content="Jeremiah Clothier's personal website and portfolio"

@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 
 import getBlogPosts, { BlogType } from 'data/blogs';
+import Head from 'next/head';
 
 const months = [
   'January',
@@ -26,6 +27,12 @@ const Blog = (props: Props) => {
   const { blogs } = props;
 
   return (
+    <>
+    <Head>
+      <title>Jeremiah Clothier | Blog</title>
+      <meta property="og:title" content="Jeremiah Clothier | Blog" key="title" />
+    </Head>
+
     <div className="my-8 mx-4 flex flex-col items-center">
       <h1
         className={clsx(
@@ -74,6 +81,7 @@ const Blog = (props: Props) => {
         <small>More coming soon...</small>
       </aside>
     </div>
+    </>
   );
 };
 
