@@ -1,4 +1,4 @@
-import type { Config } from 'jest'; // eslint-disable-line jest/no-jest-import
+import type { Config } from 'jest';
 import nextJest from 'next/jest';
 
 const createJestConfig = nextJest({

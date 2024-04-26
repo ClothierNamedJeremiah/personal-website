@@ -26,7 +26,7 @@ function NavMenu(props: Props) {
 
   return (
     <div
-      className="min-[481px]:hidden flex-shrink-0 basis-full overflow-y-hidden transition-all"
+      className="flex-shrink-0 basis-full overflow-y-hidden transition-all min-[481px]:hidden"
       data-testid="navmenu"
       ref={ref}
       style={open ? { height: ref.current?.scrollHeight } : { height: '0px' }}

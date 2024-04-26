@@ -2,7 +2,7 @@ import Link from 'components/Link';
 import styles from './index.module.css';
 
 const Home = () => (
-  <div className={`${styles.container} h-[90%] flex flex-col items-center`}>
+  <div className={`${styles.container} flex h-[90%] flex-col items-center`}>
     <div>
       <span className="fs-normal fc-yellow">Hi, my name is</span>
       <h1 className="fs-x-large font-bold leading-snug">Jeremiah Clothier</h1>

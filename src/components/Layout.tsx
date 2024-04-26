@@ -7,7 +7,7 @@ import NavBar from 'components/nav/NavBar';
 import SkipLink from 'components/SkipLink';
 
 const Layout = ({ children }: React.PropsWithChildren) => (
-  <div className="grid grid-rows-[var(--height-nav),_1fr] h-full">
+  <div className="grid h-full grid-rows-[var(--height-nav),_1fr]">
     <SkipLink />
     <NavBar />
     <main id="main-content" className="flex h-full justify-center">

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "next build",
     "clean": "rm -rf ./out/ ./.next/ ./node_modules/.cache/ ./coverage/ ./.eslintcache ./tsconfig.tsbuildinfo",
-    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./ && prettier --check .",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint --fix . && prettier --write .",
     "start": "next start",
     "start:dev": "next dev",
     "test": "jest",

@@ -28,11 +28,14 @@ const NavBar = () => {
 
   return (
     <div>
-      {isMenuOpen && (<div className="inset-0 fixed bg-black bg-opacity-90 z-10" />)}
-      <nav className="flex flex-wrap items-center bg-[var(--frost-white)] px-4 py-2 z-10 relative" aria-label="Main">
+      {isMenuOpen && <div className="fixed inset-0 z-10 bg-black bg-opacity-90" />}
+      <nav
+        className="relative z-10 flex flex-wrap items-center bg-[var(--frost-white)] px-4 py-2"
+        aria-label="Main"
+      >
         <span className={`${styles.logo} ${styles.logoLight} flex-1`} />
         <div className="flex-1 max-[480px]:hidden">
-          <ul className="fc-dark-purple justify-end flex list-none gap-2 text-xl tracking-wide">
+          <ul className="fc-dark-purple flex list-none justify-end gap-2 text-xl tracking-wide">
             {NAV_LINKS.map(({ href, displayText }) => (
               <li key={displayText}>
                 <Link
@@ -48,8 +51,8 @@ const NavBar = () => {
             ))}
           </ul>
         </div>
-        
-        <div className="min-[481px]:hidden flex-1 flex justify-end ml-auto">
+
+        <div className="ml-auto flex flex-1 justify-end min-[481px]:hidden">
           <MenuIcon isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
         </div>
         <NavMenu setMenuOpen={setMenuOpen} open={isMenuOpen} />
