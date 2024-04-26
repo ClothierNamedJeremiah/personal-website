@@ -8,11 +8,20 @@ export type BlogType = {
 
 const BLOGS: BlogType[] = [
   {
+    title: 'How-to: <tables> with sticky headers and columns',
+    shortDescription:
+      'An exploration of <tables> and walkthrough of the bare minimum HTML & CSS needed to create a table with both sticky header rows and columns.',
+    datePublished: '04-25-2024',
+    estimatedTimeToRead: '8 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/deep-dive-tables-with-sticky-headers-and-columns-9cbbeb286e73?source=friends_link&sk=ae0c6924dd64c145468306bcf2d68c3c',
+  },
+  {
     title: 'Deep Dive: Frontend Performance Issues Across Our Web Apps',
     shortDescription:
       "A journey of Remix the full-stack web framework, a problem we faced and how we solved it using Remix's flexible solutions & native Fetch API",
     datePublished: '05-17-2023',
-    estimatedTimeToRead: '5 min read',
+    estimatedTimeToRead: '10 min read',
     blogPostUrl:
       'https://medium.com/czi-technology/how-we-significantly-improved-frontend-performance-in-our-remix-app-16f845f3b297',
   },
