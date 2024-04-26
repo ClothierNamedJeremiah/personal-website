@@ -8,9 +8,9 @@ export type BlogType = {
 
 const BLOGS: BlogType[] = [
   {
-    title: 'How-to: <tables> with sticky headers and columns',
+    title: 'Creating <tables> with sticky rows and columns',
     shortDescription:
-      'An exploration of <tables> and walkthrough of the bare minimum HTML & CSS needed to create a table with both sticky header rows and columns.',
+      'A tutorial for how to create a <table> that supports sticky rows and columns. The bare minimum HTML & CSS needed to such a design. A great reference point that can be expanded and styled as needed.',
     datePublished: '04-25-2024',
     estimatedTimeToRead: '8 min read',
     blogPostUrl:
