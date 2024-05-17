@@ -15,8 +15,8 @@ const Portfolio = (props: Props) => {
   return (
     <>
       <Head>
-        <title>Jeremiah Clothier | Portfolio</title>
-        <meta property="og:title" content="Jeremiah Clothier | Portfolio" key="title" />
+        <title>Portfolio | Jeremiah Clothier</title>
+        <meta property="og:title" content="Portfolio | Jeremiah Clothier" key="title" />
       </Head>
       <div className={`${styles.container}`}>
         <h1 className={`${styles.title} fs-large fc-yellow`}>Some Things I&apos;ve Built</h1>

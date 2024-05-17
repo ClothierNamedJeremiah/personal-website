@@ -52,6 +52,12 @@ export default function App({ Component, pageProps }: Props) {
         />
         <meta property="og:site_name" content="Personal Website" />
 
+        {/* Google SEO */}
+        <meta
+          name="google-site-verification"
+          content="XUnNAvD7jaSkhxg4uVwY0MuUF74vCbiKBRQhw_eqBK8"
+        />
+
         {/* icons */}
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" href="/favicon-32x32.png" />

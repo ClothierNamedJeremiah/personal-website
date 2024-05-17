@@ -29,8 +29,8 @@ const Blog = (props: Props) => {
   return (
     <>
       <Head>
-        <title>Jeremiah Clothier | Blog</title>
-        <meta property="og:title" content="Jeremiah Clothier | Blog" key="title" />
+        <title>Blog | Jeremiah Clothier</title>
+        <meta property="og:title" content="Blog | Jeremiah Clothier" key="title" />
       </Head>
 
       <div className="mx-4 my-8 flex flex-col items-center">
