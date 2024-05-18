@@ -53,10 +53,7 @@ export default function App({ Component, pageProps }: Props) {
         <meta property="og:site_name" content="Personal Website" />
 
         {/* Google SEO */}
-        <meta
-          name="google-site-verification"
-          content="XUnNAvD7jaSkhxg4uVwY0MuUF74vCbiKBRQhw_eqBK8"
-        />
+        <meta name="google-site-verification" content="LYDuVYZ4BpWMq8zVCcEkvJ6Y2tOWwW6cq9F5-4sSOjs" />
 
         {/* icons */}
         <link rel="icon" href="/favicon-32x32.png" />

@@ -37,7 +37,7 @@ const Blog = (props: Props) => {
         <h1
           className={clsx(
             'flex w-full items-center justify-between text-yellow-300',
-            "after:inline-block after:h-0.5 after:flex-grow after:content-['']",
+            "after:inline-block after:h-0.5 after:grow after:content-['']",
             'after:ml-2 after:bg-yellow-300',
             'fs-large',
           )}

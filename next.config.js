@@ -1,21 +1,13 @@
-const ESLintWebpackPlugin = require('eslint-webpack-plugin');
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  /**
+   * Generate a static site.
+   *
+   * There aren't any features being used that require a server
+   * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
+   */
   output: 'export',
-  webpack: (config, { dev, isServer }) => {
-    if (!isServer && dev) {
-      config.plugins.push(
-        new ESLintWebpackPlugin({
-          extensions: ['.ts', '.tsx'],
-          exclude: ['.vscode/', '.next/', 'archive/', 'node_modules/', 'out/', 'public/'],
-        }),
-      );
-    }
-
-    return config;
-  },
 };
 
 module.exports = nextConfig;

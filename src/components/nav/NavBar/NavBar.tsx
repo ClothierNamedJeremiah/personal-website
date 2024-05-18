@@ -28,7 +28,7 @@ const NavBar = () => {
 
   return (
     <div>
-      {isMenuOpen && <div className="fixed inset-0 z-10 bg-black bg-opacity-90" />}
+      {isMenuOpen && <div className="fixed inset-0 z-10 bg-black/50" />}
       <nav
         className="relative z-10 flex flex-wrap items-center bg-[var(--frost-white)] px-4 py-2"
         aria-label="Main"
