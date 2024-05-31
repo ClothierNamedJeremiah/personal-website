@@ -163,4 +163,6 @@ const getBlogPosts = () => ({
   blogs: BLOGS,
 });
 
+export const NUMBER_OF_BLOGS = BLOGS.length;
+
 export default getBlogPosts;
