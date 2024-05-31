@@ -1,19 +1,28 @@
 export type ProjectType = {
   title: string;
   description: string;
-  imageClassName?: string;
   tags: string[];
   sourceCodeUrl: string;
   liveSiteUrl: string | null;
   previewImageUrl: string;
+  // FIXME(a11y)
+  // previewImageAltText: string;
 };
 
 const PORTFOLIO_PROJECTS: ProjectType[] = [
   {
+    title: 'Telephone (电话)',
+    description:
+      'A game to help learn Chinese numbers by listening to a native speaker. Enjoy fun and interactive learning! Listen and type what you here. How many answers can you get correct in 2 minutes and 22 seconds?',
+    tags: ['AWS', 'React', 'NextJS', 'Figma', 'TypeScript'],
+    sourceCodeUrl: 'https://github.com/ClothierNamedJeremiah/telephone',
+    liveSiteUrl: 'https://chinese-telephone.netlify.app/',
+    previewImageUrl: 'images/telephone.png',
+  },
+  {
     title: 'Student Loan Savings',
     description:
       'I wanted to help educate students and show them how they could be saving money on their loans. I created and deployed a web application to AWS that shows students how much they could be saving over the lifetime of their student loans. Students can submit their data in seconds and instantly get information that could save them thousands of dollars.',
-    imageClassName: 'student-loan-savings',
     tags: ['AWS', 'S3', 'Route 53', 'Cloudfront', 'React', 'Figma'],
     sourceCodeUrl: 'https://github.com/ClothierNamedJeremiah/student-loan-savings',
     liveSiteUrl: 'http://studentloansavings.info.s3-website-us-west-2.amazonaws.com',
