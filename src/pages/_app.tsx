@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }: Props) {
         {/* Google Supported <meta> tags */}
         <meta
           name="description"
-          content="A personal website by Jeremiah Clothier! Explore research blogs, innovative projects, and delicious recipes."
+          content="A personal website by Jeremiah Clothier! Stay up-to-date on recent blogs exploring frontend patterns and innovative projects."
         />
         <meta
           name="google-site-verification"

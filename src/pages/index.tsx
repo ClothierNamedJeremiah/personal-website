@@ -51,13 +51,13 @@ const Home = () => (
           <Link href="mailto:clothiernamedjeremiah@gmail.com" rel="noreferrer" target="_blank">
             Get in Touch
           </Link>
-          <Link
+          {/* <Link
             href="https://jeremiah-clothier.s3-us-west-2.amazonaws.com/resume.pdf"
             rel="noreferrer"
             target="_blank"
           >
             View Resume
-          </Link>
+          </Link> */}
         </div>
       </div>
       <svg
