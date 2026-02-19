@@ -8,6 +8,15 @@ export type BlogType = {
 
 const BLOGS: BlogType[] = [
   {
+    title: 'What I\'m Reading — Episode 01',
+    shortDescription:
+      'A mix of things I read lately — some practical, some just interesting. Covers accessibility, career growth, and a few web development resources worth bookmarking.',
+    datePublished: '02-18-2026',
+    estimatedTimeToRead: '10 min read',
+    blogPostUrl:
+      'https://clothiernamedjeremiah.medium.com/what-im-reading-part-01-cc922406a0f0?source=friends_link&sk=d794b7712343ef871790cd9b6b3907d4',
+  },
+  {
     title: 'Creating <tables> with sticky rows and columns',
     shortDescription:
       'A tutorial for how to create a <table> that supports sticky rows and columns. The bare minimum HTML & CSS needed to such a design. A great reference point that can be expanded and styled as needed.',
